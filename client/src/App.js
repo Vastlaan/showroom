@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ReactGA from "react-ga";
+//global
+import GlobalStyles from "./global/globalStyles";
+import ThemeProvider from "./global/themeProvider";
+//components
+import Landing from "./components/landing";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // //initialize analytics
+    // ReactGA.initialize('')
+
+    return (
+        <>
+            <ThemeProvider>
+                <GlobalStyles />
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Landing} />
+                    </Switch>
+                </Router>
+            </ThemeProvider>
+        </>
+    );
 }
 
 export default App;
