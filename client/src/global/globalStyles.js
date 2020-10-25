@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { respond } from "../styles";
@@ -18,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html{
-        font-size: 42%;
+        font-size: 40%;
         box-sizing: border-box;
         ${(props) => respond("xs", `font-size:30%;`)}
         ${(props) => respond("s", `font-size:50%;`)}
@@ -31,10 +32,5 @@ const GlobalStyles = createGlobalStyle`
 
     body{
         overflow-x: hidden;
-    }
-
-    h1{
-      font-size: 6rem;
-      color: ${(p) => p.theme.primary};
     }
 `;
