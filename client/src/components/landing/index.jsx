@@ -13,6 +13,7 @@ export default function () {
             <Menu>
                 <Link to='/article-1'>Article 1</Link>
                 <Link to='/article-2'>Article 2</Link>
+                <Link to='/menu-side-1'>Menu Side 1</Link>
             </Menu>
             
         </Layout>
