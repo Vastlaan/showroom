@@ -15,7 +15,7 @@ export default function space({setIsMenuDisplayed}) {
 
 const Space = styled.div`
   grid-area: space;
-  background-color: rgba(0,0,0,.6);
+  background-color: rgba(0,0,0,.3);
   display: block;
   cursor: pointer;
 

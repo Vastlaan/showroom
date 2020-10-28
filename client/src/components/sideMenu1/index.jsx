@@ -13,13 +13,13 @@ import Space from './space'
 
 export default function sideMenu1({isMenuDisplayed, setIsMenuDisplayed}) {
   return (
-    <Layout>
+  
       <Container isMenuDisplayed={isMenuDisplayed}>
-        <Menu/>
+        <Menu setIsMenuDisplayed={setIsMenuDisplayed} isMenuDisplayed={isMenuDisplayed}/>
         <Space setIsMenuDisplayed={setIsMenuDisplayed}/>
       </Container>
       
-    </Layout>
+    
   )
 }
 
@@ -38,6 +38,10 @@ const Container = styled.section`
   grid-template-rows: 30% 1fr;
   z-index: 99;
   transition: all .3s;
+  scrollbar-width: none;
+  &::-webkit-scrollbar{
+    width: 0px;
+  }
 
   ${()=>respond('m',`
     grid-template-columns: 30rem 1fr;

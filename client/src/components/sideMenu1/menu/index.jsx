@@ -4,11 +4,13 @@ import {fonts} from '../../../styles'
 import Sector from './sector'
 // import props
 import {MenuProps as props} from '../../../data/sideMenu.js'
+import Button from '../../buttonMenu'
 
-export default function menu() {
+export default function menu({setIsMenuDisplayed, isMenuDisplayed}) {
 
   return (
     <Menu>
+      <Button setIsOpen={setIsMenuDisplayed} isOpen={isMenuDisplayed}/>
       <Main>
         <HeaderMain>
           <h3>
@@ -36,6 +38,7 @@ const Menu = styled.aside`
   display: flex;
   flex-direction: column;
   background-color: ${p=>p.theme.grey6};
+  position:relative;
 
 `
 const Main = styled.nav`

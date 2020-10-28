@@ -9,6 +9,8 @@ import Landing from "./components/landing";
 import Article1 from "./components/article1";
 import Article2 from "./components/article2";
 import SideMenu1 from "./components/sideMenu1";
+import ButtonMenu from "./components/buttonMenu";
+import Example1 from "./components/example1";
 
 function App() {
     // //initialize analytics
@@ -30,6 +32,26 @@ function App() {
                             path="/menu-side-1"
                             render={() => (
                                 <SideMenu1
+                                    isMenuDisplayed={isMenuDisplayed}
+                                    setIsMenuDisplayed={setIsMenuDisplayed}
+                                />
+                            )}
+                        />
+                        <Route
+                            exact
+                            path="/button-menu"
+                            render={() => (
+                                <ButtonMenu
+                                    isOpen={isMenuDisplayed}
+                                    setIsOpen={setIsMenuDisplayed}
+                                />
+                            )}
+                        />
+                        <Route
+                            exact
+                            path="/example-1"
+                            render={() => (
+                                <Example1
                                     isMenuDisplayed={isMenuDisplayed}
                                     setIsMenuDisplayed={setIsMenuDisplayed}
                                 />
