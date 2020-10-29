@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import styled from "styled-components";
 import {Context} from '../../store'
+import {respond} from '../../styles'
 
 export default function ButtonMenu() {
     //this button takes its state as a props, uncomment code below if it does't
@@ -29,8 +30,11 @@ const Button = styled.button`
     cursor: pointer;
     position: ${p=>p.isOpen?'absolute':'fixed'};
     top:1rem;
-    right: 1rem;
+    right: ${p=>p.isOpen?'1rem':'1rem'};
 
+    // below media query is optional
+    ${(p)=>respond('xl',`right: ${p.isOpen?'1rem':'calc(((100vw - 1366px) / 2) + 1rem)'};`)}
+    
     &:active,
     :focus {
         outline: none;

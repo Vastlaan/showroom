@@ -16,6 +16,7 @@ export default function () {
                 <Link to='/menu-side-1'>Menu Side 1</Link>
                 <Link to='/button-menu'>Button Menu</Link>
                 <Link to='/example-1'>Example 1</Link>
+                <Link to='/nav-1'>Navigation 1</Link>
             </Menu>
             
         </Layout>

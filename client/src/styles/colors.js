@@ -12,6 +12,7 @@ export const colorsLight = {
     grey5: "#7f8c8d",
     grey6: "#bdc3c7",
     grey7: "#ecf0f1",
+    grey8: "#f8f9fa",
 };
 export const colorsDark = {
     primary: "#34495E",

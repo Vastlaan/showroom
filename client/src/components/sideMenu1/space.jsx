@@ -5,7 +5,6 @@ import {fonts, respond} from '../../styles'
 export default function space({setIsMenuDisplayed}) {
   return (
     <Space  onClick={()=>{
-          console.log(false)
           setIsMenuDisplayed(false)
         }}>
       

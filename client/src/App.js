@@ -12,6 +12,7 @@ import Article2 from "./components/article2";
 import SideMenu1 from "./components/sideMenu1";
 import ButtonMenu from "./components/buttonMenu";
 import Example1 from "./components/example1";
+import Nav1 from "./components/navigation1";
 
 function App() {
     // //initialize analytics
@@ -49,6 +50,11 @@ function App() {
                                 exact
                                 path="/example-1"
                                 render={() => <Example1 />}
+                            />
+                            <Route
+                                exact
+                                path="/nav-1"
+                                render={() => <Nav1 />}
                             />
                         </Switch>
                     </Router>

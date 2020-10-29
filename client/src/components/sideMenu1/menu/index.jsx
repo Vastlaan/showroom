@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import {fonts} from '../../../styles'
 import Sector from './sector'
@@ -13,9 +14,11 @@ export default function menu({setIsMenuDisplayed, isMenuDisplayed}) {
       <Button setIsOpen={setIsMenuDisplayed} isOpen={isMenuDisplayed}/>
       <Main>
         <HeaderMain>
-          <h3>
-            {props.header}
-          </h3>
+          <Link to='/' style={{textDecoration:'none'}}>
+            <h3>
+              {props.header}
+            </h3>
+          </Link>
           <h6>
             {props.subheader}
           </h6>
