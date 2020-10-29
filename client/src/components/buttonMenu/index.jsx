@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import { colors } from "../../styles";
+import {Context} from '../../store'
 
-export default function ButtonMenu({ isOpen, setIsOpen }) {
+export default function ButtonMenu() {
     //this button takes its state as a props, uncomment code below if it does't
     //const [isOpen, setIsOpen] = useState(false);
+
+    const {store, dispatch} = useContext(Context)
+    
     return (
         <Button
-            isOpen={isOpen}
-            onClick={() => setIsOpen((prevState) => !prevState)}
+            isOpen={store.isMenuOpen}
+            onClick={() => dispatch({type: 'switchMenu', payload: undefined})}
         >
             <div></div>
         </Button>

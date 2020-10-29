@@ -4,6 +4,7 @@ import ReactGA from "react-ga";
 //global
 import GlobalStyles from "./global/globalStyles";
 import ThemeProvider from "./global/themeProvider";
+import StateProvider from "./global/stateProvider";
 //components
 import Landing from "./components/landing";
 import Article1 from "./components/article1";
@@ -16,50 +17,43 @@ function App() {
     // //initialize analytics
     // ReactGA.initialize('')
 
-    const [isMenuDisplayed, setIsMenuDisplayed] = useState(true);
-
     return (
         <>
-            <ThemeProvider>
-                <GlobalStyles />
-                <Router>
-                    <Switch>
-                        <Route exact path="/" component={Landing} />
-                        <Route exact path="/article-1" component={Article1} />
-                        <Route exact path="/article-2" component={Article2} />
-                        <Route
-                            exact
-                            path="/menu-side-1"
-                            render={() => (
-                                <SideMenu1
-                                    isMenuDisplayed={isMenuDisplayed}
-                                    setIsMenuDisplayed={setIsMenuDisplayed}
-                                />
-                            )}
-                        />
-                        <Route
-                            exact
-                            path="/button-menu"
-                            render={() => (
-                                <ButtonMenu
-                                    isOpen={isMenuDisplayed}
-                                    setIsOpen={setIsMenuDisplayed}
-                                />
-                            )}
-                        />
-                        <Route
-                            exact
-                            path="/example-1"
-                            render={() => (
-                                <Example1
-                                    isMenuDisplayed={isMenuDisplayed}
-                                    setIsMenuDisplayed={setIsMenuDisplayed}
-                                />
-                            )}
-                        />
-                    </Switch>
-                </Router>
-            </ThemeProvider>
+            <StateProvider>
+                <ThemeProvider>
+                    <GlobalStyles />
+                    <Router>
+                        <Switch>
+                            <Route exact path="/" component={Landing} />
+                            <Route
+                                exact
+                                path="/article-1"
+                                component={Article1}
+                            />
+                            <Route
+                                exact
+                                path="/article-2"
+                                component={Article2}
+                            />
+                            <Route
+                                exact
+                                path="/menu-side-1"
+                                render={() => <SideMenu1 />}
+                            />
+                            <Route
+                                exact
+                                path="/button-menu"
+                                render={() => <ButtonMenu />}
+                            />
+                            <Route
+                                exact
+                                path="/example-1"
+                                render={() => <Example1 />}
+                            />
+                        </Switch>
+                    </Router>
+                </ThemeProvider>
+            </StateProvider>
         </>
     );
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-import Layout from '../layout'
+import React, {useContext} from 'react'
 import styled from 'styled-components'
 import { respond} from '../../styles'
+import {Context} from '../../store'
 // components
 import Menu from './menu'
 import Space from './space'
@@ -11,15 +11,17 @@ import Space from './space'
   The Layout wrapper here is only for test puropses and should be removed.
 */
 
-export default function sideMenu1({isMenuDisplayed, setIsMenuDisplayed}) {
-  return (
+export default function SideMenu1() {
+
+  const {store, dispatch} = useContext(Context)
+  const setIsMenuDisplayed = () => dispatch({type: 'switchMenu', payload: undefined})
   
-      <Container isMenuDisplayed={isMenuDisplayed}>
-        <Menu setIsMenuDisplayed={setIsMenuDisplayed} isMenuDisplayed={isMenuDisplayed}/>
+
+  return (
+      <Container isMenuDisplayed={store.isMenuOpen}>
+        <Menu setIsMenuDisplayed={setIsMenuDisplayed} isMenuDisplayed={store.isMenuOpen}/>
         <Space setIsMenuDisplayed={setIsMenuDisplayed}/>
       </Container>
-      
-    
   )
 }
 
