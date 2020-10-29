@@ -13,6 +13,7 @@ import SideMenu1 from "./components/sideMenu1";
 import ButtonMenu from "./components/buttonMenu";
 import Example1 from "./components/example1";
 import Nav1 from "./components/navigation1";
+import Header1 from "./components/header1";
 
 function App() {
     // //initialize analytics
@@ -55,6 +56,11 @@ function App() {
                                 exact
                                 path="/nav-1"
                                 render={() => <Nav1 />}
+                            />
+                            <Route
+                                exact
+                                path="/header-1"
+                                render={() => <Header1 />}
                             />
                         </Switch>
                     </Router>

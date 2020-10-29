@@ -17,6 +17,7 @@ export default function () {
                 <Link to='/button-menu'>Button Menu</Link>
                 <Link to='/example-1'>Example 1</Link>
                 <Link to='/nav-1'>Navigation 1</Link>
+                <Link to='/header-1'>Header 1</Link>
             </Menu>
             
         </Layout>

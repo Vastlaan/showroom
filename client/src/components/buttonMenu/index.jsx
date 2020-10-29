@@ -34,6 +34,7 @@ const Button = styled.button`
 
     // below media query is optional
     ${(p)=>respond('xl',`right: ${p.isOpen?'1rem':'calc(((100vw - 1366px) / 2) + 1rem)'};`)}
+    ${(p)=>respond('tv',`right: ${p.isOpen?'1rem':'calc(((100vw - 2561px) / 2) + 1rem)'};`)}
     
     &:active,
     :focus {

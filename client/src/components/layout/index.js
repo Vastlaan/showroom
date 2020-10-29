@@ -19,4 +19,5 @@ const Container = styled.main`
     min-height: 100vh;
     background-color: ${(p) => p.theme.grey8};
     ${() => respond("xl", "width: 1366px; margin: 0 auto;")}
+    ${() => respond("tv", "width: 2560px; margin: 0 auto;")}
 `;
