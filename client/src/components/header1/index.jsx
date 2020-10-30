@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from '../../img/header-1.jpg'
-import {respond, fonts} from '../../styles'
+import {respond, fonts, Button1, SocialButton1} from '../../styles'
+import {FiFacebook, FiInstagram, FiLinkedin} from 'react-icons/fi'
 
 export default function Header1() {
   return (
@@ -18,7 +19,12 @@ export default function Header1() {
           </p>
         </Para>
         <Buttons>
-          <Button>Read more</Button>
+          <Button1>Read more</Button1>
+          <div>
+            <SocialButton1><FiFacebook/></SocialButton1>
+            <SocialButton1><FiInstagram/></SocialButton1>
+            <SocialButton1><FiLinkedin/></SocialButton1>
+          </div>
         </Buttons>
         
       </Content>
@@ -32,24 +38,19 @@ export default function Header1() {
 const Container = styled.header`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12,minmax(8.3vh, 10rem));
 
-  ${()=>respond('l','grid-template-rows: repeat(12,1fr);')}
 `
-
 const Content = styled.div`
   grid-column: 2/-2;
-  grid-row: 1/8;
+  grid-row: 1/-1;
   display: flex;
   flex-direction:column;
   justify-content: center;
-  transform: translateY(-5rem);
+  z-index: 2;
     
 
   ${()=>respond('l',`
     grid-column: 2/7;
-    grid-row: 2/-2;
-    transform: translateY(-2rem);
   `)}
 
 `
@@ -57,81 +58,64 @@ const Headline = styled.div`
 
   h1{
     font-family: ${fonts.heading1};
-    font-size: 5rem;
-    color: ${p=>p.theme.secondary};
+    font-size: 6.8rem;
+    color: ${p=>p.theme.secondaryLight};
+    
+    ${(p)=>respond('l',`
+      color: ${p.theme.secondary};
+    `)}
   }
   h3{
     font-family: ${fonts.para1};
     font-size: 2.3rem;
-    color: ${p=>p.theme.grey3};
+    font-weight: 400;
+    color: ${p=>p.theme.grey7};
+    ${(p)=>respond('l',`
+      color: ${p.theme.grey3};
+    `)}
   }
 `
 
 const Para = styled.div`
-  max-width: 60rem;
+  max-width: 30rem;
   margin: 5rem 0;
+  ${()=>respond('l',`
+    max-width: 60rem;
+  `)}
 
   p{
     font-family: ${fonts.para1};
     font-size: 2.1rem;
-    color: ${p=>p.theme.grey3};
+    color: ${p=>p.theme.grey8};
+    text-shadow: .2rem .2rem .2rem rgba(0,0,0,.9);
+    ${(p)=>respond('l',`
+      color: ${p.theme.grey3};
+      text-shadow: .2rem .2rem .2rem rgba(0,0,0,0);
+    `)}
   }
 `
 const Buttons = styled.div`
-
-`
-const Button = styled.button`
-  width: 20rem;
-  height: 5rem;
-  color: ${p=>p.theme.grey8};
-  border: 1px solid ${p=>p.theme.secondary};
-  background-color: transparent;
-  font-family: ${fonts.para1};
-  font-size: 1.6rem;
-  letter-spacing: .2rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all .3s;
-  position:relative;
-  overflow: hidden;
-  z-index: 2;
-
-  &:after{
-    content: '';
-    display: block;
-    background-color: ${p=>p.theme.secondary};
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .3s;
-    z-index: -1;
-  }
-
-  &:hover{
-    border: 1px solid ${p=>p.theme.grey3};
-    color: ${p=>p.theme.grey3};
-    &:after{
-      top:100%;
+  
+  div{
+    margin-top: 2rem;
+    display: flex;
+    button{
+      margin-right: 2rem;
     }
-  }
-
-  &:focus, :active{
-    outline: none;
   }
 `
 const Image =styled.div`
   grid-column: 1/-1;
-  grid-row: 8/-1;
-  max-height: calc(80vh - 5rem);
+  grid-row: 1/-1;
+  max-height: 60rem;
   overflow:hidden;
   display:flex;
   align-items: center;
 
   ${()=>respond('l',`
     grid-column: 8/-1;
-    grid-row: 1/-1;
+    max-height: calc(70vh - 5rem);
+    
   `)}
 
   img{
