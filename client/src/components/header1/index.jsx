@@ -41,6 +41,7 @@ const Container = styled.header`
 
 `
 const Content = styled.div`
+  padding: 5rem 0;
   grid-column: 2/-2;
   grid-row: 1/-1;
   display: flex;
@@ -114,7 +115,7 @@ const Image =styled.div`
 
   ${()=>respond('l',`
     grid-column: 8/-1;
-    max-height: calc(70vh - 5rem);
+    max-height: calc(70vh);
     
   `)}
 
