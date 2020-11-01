@@ -11,9 +11,11 @@ import Article1 from "./components/article1";
 import Article2 from "./components/article2";
 import SideMenu1 from "./components/sideMenu1";
 import ButtonMenu from "./components/buttonMenu";
+import Buttons from "./components/buttons";
 import Example1 from "./components/example1";
 import Nav1 from "./components/navigation1";
 import Header1 from "./components/header1";
+import Header2 from "./components/header2";
 
 function App() {
     // //initialize analytics
@@ -49,6 +51,11 @@ function App() {
                             />
                             <Route
                                 exact
+                                path="/buttons"
+                                render={() => <Buttons />}
+                            />
+                            <Route
+                                exact
                                 path="/example-1"
                                 render={() => <Example1 />}
                             />
@@ -61,6 +68,11 @@ function App() {
                                 exact
                                 path="/header-1"
                                 render={() => <Header1 />}
+                            />
+                            <Route
+                                exact
+                                path="/header-2"
+                                render={() => <Header2 />}
                             />
                         </Switch>
                     </Router>
