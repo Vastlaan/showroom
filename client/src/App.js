@@ -16,6 +16,7 @@ import Example1 from "./components/example1";
 import Nav1 from "./components/navigation1";
 import Header1 from "./components/header1";
 import Header2 from "./components/header2";
+import Overlapping1 from "./components/overlapping1";
 
 function App() {
     // //initialize analytics
@@ -73,6 +74,11 @@ function App() {
                                 exact
                                 path="/header-2"
                                 render={() => <Header2 />}
+                            />
+                            <Route
+                                exact
+                                path="/overlapping-1"
+                                render={() => <Overlapping1 />}
                             />
                         </Switch>
                     </Router>

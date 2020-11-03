@@ -11,15 +11,16 @@ export default function () {
     return (
         <Layout>
             <Menu>
+                <Link to='/example-1'>Example 1</Link>
                 <Link to='/article-1'>Article 1</Link>
                 <Link to='/article-2'>Article 2</Link>
                 <Link to='/menu-side-1'>Menu Side 1</Link>
                 <Link to='/buttons'>Buttons</Link>
                 <Link to='/button-menu'>Button Menu</Link>
-                <Link to='/example-1'>Example 1</Link>
                 <Link to='/nav-1'>Navigation 1</Link>
                 <Link to='/header-1'>Header 1</Link>
                 <Link to='/header-2'>Header 2</Link>
+                <Link to='/overlapping-1'>Section Overlapping 1</Link>
             </Menu>
             
         </Layout>
