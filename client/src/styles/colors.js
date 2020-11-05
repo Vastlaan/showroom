@@ -5,6 +5,9 @@ export const colorsLight = {
     secondaryDark: "#2c3e50",
     secondaryLight: "#8ea8c3",
 
+    primary2: "#006A93",
+    secondary2: "#FF6B35",
+
     grey1: "#202020",
     grey2: "#343434",
     grey3: "#4F4F4F",

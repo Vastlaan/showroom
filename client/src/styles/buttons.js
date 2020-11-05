@@ -89,6 +89,52 @@ export const Button2 = styled.button`
     }
 `;
 
+export const Button3 = styled.button`
+    width: 20rem;
+    height: 5rem;
+    color: ${(p) => (p.color ? p.color : p.theme.grey7)};
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-family: ${fonts.para1};
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.3rem ${(p) => (p.color ? p.color : p.theme.grey7)};
+    z-index: 2;
+
+    &:after {
+        content: "";
+        display: block;
+        border-radius: 1rem;
+        box-shadow: 0 0 0rem ${(p) => (p.color ? p.color : p.theme.grey7)};
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: ${(p) => (p.color ? p.color : p.theme.grey7)};
+        &:after {
+            transform: scale(1.5);
+            box-shadow: 0 0 0.5rem ${(p) => (p.color ? p.color : p.theme.grey7)};
+            opacity: 0;
+        }
+    }
+
+    &:focus,
+    :active {
+        outline: none;
+    }
+`;
+
 export const SocialButton1 = styled.button`
     width: 4rem;
     height: 4rem;
@@ -115,5 +161,44 @@ export const SocialButton1 = styled.button`
         color: ${(p) => p.theme.grey8};
         ${(p) =>
             respond("l", `color: ${p.color ? p.color : p.theme.secondary};`)}
+    }
+`;
+
+export const ButtonFull = styled.button`
+    padding: 1.1rem 2.3rem;
+    background-color: ${(p) => (p.color ? p.color : p.theme.grey7)};
+    color: ${(p) => (p.color2 ? p.color2 : p.theme.grey1)};
+    border: none;
+    border-radius: 2rem;
+    font-family: ${fonts.para4};
+    font-size: 1.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:focus,
+    :active {
+        outline: none;
+    }
+`;
+export const ButtonEmpty = styled.button`
+    padding: 1.1rem 2.3rem;
+    background-color: transparent;
+    color: ${(p) => (p.color ? p.color : p.theme.grey7)};
+    border: 1px solid ${(p) => (p.color ? p.color : p.theme.grey7)};
+    border-radius: 2rem;
+    font-family: ${fonts.para4};
+    font-size: 1.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:focus,
+    :active {
+        outline: none;
     }
 `;

@@ -1,15 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { respond } from "../../styles";
-import Menu from "../sideMenu1";
 
 export default function Layout({ children }) {
-    return (
-        <Container>
-            <Menu />
-            {children}
-        </Container>
-    );
+    return <Container>{children}</Container>;
 }
 
 const Container = styled.main`

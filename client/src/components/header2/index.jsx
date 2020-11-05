@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from '../../img/header-1.jpg'
-import {respond, fonts, SocialButton1, Button2} from '../../styles'
+import {respond, fonts, SocialButton1, Button2, Button3} from '../../styles'
 import {FiFacebook, FiInstagram, FiLinkedin} from 'react-icons/fi'
 
 export default function Header2() {
@@ -19,7 +19,7 @@ export default function Header2() {
           </p>
         </Para>
         <Buttons>
-          <Button2>Read more</Button2>
+          <Button3>Read more</Button3>
           <Button2>Read more</Button2>
         </Buttons>
       </Content>

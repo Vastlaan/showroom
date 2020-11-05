@@ -13,10 +13,14 @@ import SideMenu1 from "./components/sideMenu1";
 import ButtonMenu from "./components/buttonMenu";
 import Buttons from "./components/buttons";
 import Example1 from "./components/example1";
+import Example2 from "./components/example2";
 import Nav1 from "./components/navigation1";
+import Nav2 from "./components/navigation2";
 import Header1 from "./components/header1";
 import Header2 from "./components/header2";
+import Header3 from "./components/header3";
 import Overlapping1 from "./components/overlapping1";
+import Intersection1 from "./components/intersection1";
 
 function App() {
     // //initialize analytics
@@ -62,8 +66,18 @@ function App() {
                             />
                             <Route
                                 exact
+                                path="/example-2"
+                                render={() => <Example2 />}
+                            />
+                            <Route
+                                exact
                                 path="/nav-1"
                                 render={() => <Nav1 />}
+                            />
+                            <Route
+                                exact
+                                path="/nav-2"
+                                render={() => <Nav2 />}
                             />
                             <Route
                                 exact
@@ -77,8 +91,18 @@ function App() {
                             />
                             <Route
                                 exact
+                                path="/header-3"
+                                render={() => <Header3 />}
+                            />
+                            <Route
+                                exact
                                 path="/overlapping-1"
                                 render={() => <Overlapping1 />}
+                            />
+                            <Route
+                                exact
+                                path="/intersection-1"
+                                render={() => <Intersection1 />}
                             />
                         </Switch>
                     </Router>
