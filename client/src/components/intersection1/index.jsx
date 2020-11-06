@@ -7,7 +7,7 @@ export default function Intersection1() {
     <Container>
       <Line/>
       <Header>Professioneel Team Vakmensen</Header>
-      <Para>Het standaard stuk van Lorum Ipsum wat sinds de 16e eeuw wordt gebruikt is hieronder, voor wie er interesse in heeft, weergegeven. Secties 1.10.32 en 1.10.33 van "de Finibus Bonorum et Malorum" door Cicero zijn ook weergegeven in hun exacte originele vorm, vergezeld van engelse versies van de 1914 vertaling door H. Rackham.</Para>
+      <Para>Het standaard stuk van eeuw wordt gebruikt is hieronder, voor wie er interesse in heeft, weergegeven. Sectieijn ook weergegeven in hun exacte originele vorm, vergezeld van engelse versies van de 1914 vertaling door H. Rackham.</Para>
       <ButtonFull color='#FF6B35' color2='#fff'>Lees meer</ButtonFull>
     </Container>
   )
@@ -31,7 +31,7 @@ const Line = styled.div`
 
 const Header = styled.h1`
   font-family: ${fonts.heading4};
-  font-size: 4.7rem;
+  font-size: 3.9rem;
   font-weight: 400;
   letter-spacing: 2%;
   text-align: center;
@@ -43,9 +43,10 @@ const Header = styled.h1`
 const Para = styled.p`
   margin: 4.7rem auto;
   max-width: 50rem;
-  font-family: ${fonts.para4};
-  font-size: 2.1rem;
-  font-weight: 400;
+  font-family: ${fonts.heading4};
+  font-size: 1.9rem;
+  line-height: 1.6;
+  font-weight: 300;
   letter-spacing: 2%;
   text-align: center;
   color: ${p=>p.theme.grey4};

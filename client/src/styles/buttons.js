@@ -165,12 +165,13 @@ export const SocialButton1 = styled.button`
 `;
 
 export const ButtonFull = styled.button`
-    padding: 1.1rem 2.3rem;
+    padding: 1.1rem 2.7rem;
     background-color: ${(p) => (p.color ? p.color : p.theme.grey7)};
     color: ${(p) => (p.color2 ? p.color2 : p.theme.grey1)};
     border: none;
     border-radius: 2rem;
-    font-family: ${fonts.para4};
+    font-family: ${fonts.heading4};
+    font-weight: 300;
     font-size: 1.9rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -184,12 +185,13 @@ export const ButtonFull = styled.button`
     }
 `;
 export const ButtonEmpty = styled.button`
-    padding: 1.1rem 2.3rem;
+    padding: 1.1rem 2.7rem;
     background-color: transparent;
     color: ${(p) => (p.color ? p.color : p.theme.grey7)};
     border: 1px solid ${(p) => (p.color ? p.color : p.theme.grey7)};
     border-radius: 2rem;
-    font-family: ${fonts.para4};
+    font-family: ${fonts.heading4};
+    font-weight: 300;
     font-size: 1.9rem;
     cursor: pointer;
     transition: all 0.3s;

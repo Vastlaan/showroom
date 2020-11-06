@@ -50,12 +50,12 @@ const Container = styled.header`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 2.3rem;
-  grid-row-gap: 13.6rem;
-  margin:  13.6rem 2.3rem;
+  grid-row-gap: 8.2rem;
+  padding:  8.2rem 2.3rem;
   overflow: hidden;
 
-  ${()=>respond('l','margin: 13.6 8.2rem; overflow: visible; ')}
-  ${()=>respond('xl','margin: 13.6rem; ')}
+  ${()=>respond('l','padding: 10rem 8.2rem; overflow: visible; ')}
+  ${()=>respond('xxl','padding: 13.6rem; ')}
 `
 const Content = styled.div`
   grid-column: 1/-1;
@@ -64,27 +64,28 @@ const Content = styled.div`
 
   h1{
     font-family: ${fonts.heading4};
-    font-size: 6.8rem; //8.2
+    font-size: 6.2rem; //8.2
     letter-spacing: -.3rem;
     font-weight: 700;
     color: ${p=>p.theme.grey7};
-    line-height: .9;
+    line-height: 1;
+    ${()=>respond('xxl','font-size: 6.7rem; ')}
 
   }
   p{
     margin: 2.3rem 0;
-    font-family: ${fonts.para4};
-    font-size: 2.3rem;
+    font-family: ${fonts.heading4};
+    font-size: 1.9rem;
     letter-spacing: .1rem;
-    font-weight: 400;
+    font-weight: 300;
     color: ${p=>p.theme.grey7};
     line-height: 1.6;
-    max-width: 50rem;
+    max-width: 40rem;
   }
 `
 const Buttons = styled.div`
   margin: 8.2rem 0;
-  width: 25rem;
+  width: 27rem;
   display: flex;
   justify-content: space-between;
 
