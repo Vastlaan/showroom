@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import Net from '../decorative1'
 import {fonts, respond, ButtonFull, ButtonEmpty} from '../../styles'
@@ -17,9 +18,9 @@ export default function Header3() {
         </h1>
         <p>Ervaring en kennis in grote bouwwerk en voor particuleren.</p>
         <Buttons>
-          <ButtonFull>Offerte</ButtonFull>
+          <Link to='/' style={{textDecoration:'none'}}><ButtonFull>Offerte</ButtonFull></Link>
           
-          <ButtonEmpty>Contact</ButtonEmpty>
+          <Link to='/' style={{textDecoration:'none'}}><ButtonEmpty>Contact</ButtonEmpty></Link>
         </Buttons>
       </Content>
       <Pictures>

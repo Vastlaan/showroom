@@ -19,28 +19,12 @@ export default function ShortSection1() {
               </Link>
             </Logo>
             <Para>Jouw Partner in bouwen</Para>
-            <ButtonFull style={{marginTop: '5rem'}} color='#FF6B35' color2='white'>Over Ons</ButtonFull>
+            <Link to='/' style={{textDecoration:'none'}}><ButtonFull style={{marginTop: '5rem'}} color='#FF6B35' color2='white'>Over Ons</ButtonFull></Link>
           </CardContent>
           <Net style={{ position: 'absolute', bottom:'-80px', left: '50px', zIndex: -1}} color='#006A93' gap="10px"/>
           <Net style={{ position: 'absolute', top:'-80px', right: '-50px', zIndex: -1}} color='#006A93' gap="10px"/>
         </Card>
       </CardHolder>
-      <Icons>
-          <IconField>
-            <BsBuilding color='#006A93'/>
-            <TextField>
-              <h3>Specialistische advies</h3>
-              <p>en vakkundige uitvoering voor grote benodigen</p>
-            </TextField>
-          </IconField>
-          <IconField>
-            <BsHouse color='#FF6B35'/>
-            <TextField>
-              <h3>Ervaring en kennis</h3>
-              <p>ook voor kleine opdrachgevers en particuleren</p>
-            </TextField>
-          </IconField>
-      </Icons>
     </Container>
   )
 }
@@ -122,49 +106,3 @@ const Logo = styled.div`
   }
 `
 
-const Icons = styled.div`
-  margin: 20rem auto 5rem auto;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  width: 100%;
-  
-
-  ${()=>respond('l','flex-direction: row; justify-content: space-around; width:70%;')}
-
-
-`
-const IconField = styled.div`
-    margin: 2rem;
-    display: grid;
-    grid-template-columns: 8rem 1fr;
-
-    svg{
-      width: 5.7rem;
-      height: 5.7rem;
-      margin-right: 2rem;
-      align-self: end;
-    }
-    
-`
-
-const TextField = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-self: end;
-  h3{
-      max-width: 30rem;
-      font-family: ${fonts.heading4};
-      font-size: 1.9rem;
-      font-weight: 600;
-      color: ${p=>p.theme.grey3};
-    }
-    p{
-      max-width: 30rem;
-      font-family: ${fonts.heading4};
-      font-size: 1.9rem;
-      font-weight: 300;
-      color: ${p=>p.theme.grey4};
-    }
-
-`

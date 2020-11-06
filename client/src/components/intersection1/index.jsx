@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import {fonts, respond, ButtonFull} from '../../styles'
 
@@ -8,21 +9,21 @@ export default function Intersection1() {
       <Line/>
       <Header>Professioneel Team Vakmensen</Header>
       <Para>Het standaard stuk van eeuw wordt gebruikt is hieronder, voor wie er interesse in heeft, weergegeven. Sectieijn ook weergegeven in hun exacte originele vorm, vergezeld van engelse versies van de 1914 vertaling door H. Rackham.</Para>
-      <ButtonFull color='#FF6B35' color2='#fff'>Lees meer</ButtonFull>
+      <Link to='/' style={{textDecoration:'none'}}><ButtonFull color='#FF6B35' color2='#fff'>Lees meer</ButtonFull></Link>
     </Container>
   )
 }
 
 const Container = styled.div`
   width: 100%;
-  margin: 13.8rem auto;
+  padding: 13.8rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 
 `
 const Line = styled.div`
-  margin-bottom: 5rem;
+  margin: 5rem auto;
   width: 20rem;
   height: 1px;
   background-color: ${p=>p.theme.grey3};
