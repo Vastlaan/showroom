@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: inherit;
         line-height: 1.3;
         scrollbar-width: thin;
-        &::webkit-scrollbar{width: 4px};
+        scrollbar{width: 4px};
         ${() => respond("m", "line-height: 1.6;")};
 
     }
@@ -35,5 +35,9 @@ const GlobalStyles = createGlobalStyle`
 
     body{
         overflow-x: hidden;
+    }
+
+    a{
+        text-decoration: none;
     }
 `;

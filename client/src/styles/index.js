@@ -9,6 +9,7 @@ import {
     ButtonFull,
     ButtonEmpty,
 } from "./buttons";
+import { Section, Content } from "./containers";
 
 export {
     colorsLight,
@@ -21,4 +22,6 @@ export {
     Button3,
     ButtonFull,
     ButtonEmpty,
+    Section,
+    Content,
 };

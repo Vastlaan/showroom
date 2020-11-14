@@ -8,6 +8,9 @@ export const colorsLight = {
     primary2: "#006A93",
     secondary2: "#FF6B35",
 
+    primary3: "#524239",
+    secondary3: "#AC4B44",
+
     grey1: "#202020",
     grey2: "#343434",
     grey3: "#4F4F4F",

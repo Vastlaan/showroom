@@ -168,16 +168,19 @@ export const ButtonFull = styled.button`
     padding: 1.1rem 2.7rem;
     background-color: ${(p) => (p.color ? p.color : p.theme.grey7)};
     color: ${(p) => (p.color2 ? p.color2 : p.theme.grey1)};
-    border: none;
+    border: 1px solid transparent;
     border-radius: 2rem;
     font-family: ${fonts.heading4};
     font-weight: 300;
     font-size: 1.9rem;
     cursor: pointer;
     transition: all 0.3s;
+    margin: 1rem 1rem 1rem 0;
 
     &:hover {
-        transform: scale(1.1);
+        background-color: transparent;
+        color: ${(p) => (p.color ? p.color : p.theme.grey1)};
+        border: 1px solid ${(p) => (p.color ? p.color : p.theme.grey1)};
     }
     &:focus,
     :active {
@@ -195,9 +198,12 @@ export const ButtonEmpty = styled.button`
     font-size: 1.9rem;
     cursor: pointer;
     transition: all 0.3s;
+    margin: 1rem 1rem 1rem 0;
 
     &:hover {
-        transform: scale(1.1);
+        background-color: ${(p) => (p.color ? p.color : p.theme.grey7)};
+        color: ${(p) => (p.color2 ? p.color2 : p.theme.grey1)};
+        border: 1px solid transparent;
     }
     &:focus,
     :active {
