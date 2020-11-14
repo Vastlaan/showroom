@@ -111,7 +111,7 @@ const Menu = styled.nav`
   justify-content: space-between;
   align-items: flex-start;
   transition: all .3s;
-  transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+  
   transform: ${p=>p.visible?'translateY(0%)':'translateY(-300%)'};
   position: absolute;
   top: 100%;
@@ -120,7 +120,7 @@ const Menu = styled.nav`
   background-color: white;
   flex-direction: column;
   width: 100%;
-  padding-top: 2.3rem;
+  padding: 4.7rem;
 
 
 
@@ -132,18 +132,19 @@ const Menu = styled.nav`
     background-color: transparent;
     flex-direction: row;
     align-items: center;
-    padding-top: 0rem;
+    padding: 0rem;
   `)}
 
   a{
     font-family: ${fonts.heading4};
     color: ${p=>p.theme.grey4};
     font-size: 1.9rem;
-    margin: 1rem 2rem;
+    margin: 2.7rem;
     transition: all .6s;
+    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
     transform: ${p=>p.visible?'translateY(0%)':'translateY(-250%)'};
 
-    ${()=>respond('l','transform: translateY(0);')}
+    ${()=>respond('l','transform: translateY(0);margin: 1rem 2rem;')}
 
     &:hover{
       color: ${p=>p.theme.grey2};

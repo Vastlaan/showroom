@@ -49,11 +49,11 @@ const Info = styled.div`
 const Headline1 = styled.h1`
   font-family: ${fonts.poppins};
   font-size: 4.8rem;
-  font-weight: 700;
+  font-weight: 800;
   color: ${p=>p.theme.primary3};
-  line-height: 2;
+  line-height: 1.2;
 
-  ${()=>respond('l','font-size: 5.7rem;line-height: 1.2;')}
+  ${()=>respond('l','font-size: 5.7rem;')}
 
   span{
     color: ${p=>p.theme.secondary3};
