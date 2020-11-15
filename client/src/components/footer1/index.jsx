@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
+import {data} from '../../data/footer1'
 import {fonts, respond} from '../../styles'
 
 
@@ -15,58 +16,29 @@ export default function Footer1() {
               <h2>Bouw</h2>
             </Link>
           </Logo>
-          <Para>Jouw Partner in bouwen</Para>
+          <Para>{data.header}</Para>
         </div>
        
         
       </Info>
       <Lists>
-        <div>
-          <h3>Diensten</h3>
-          <Link to='/'>Bouwen</Link>
-          <Link to='/'>Renoveren</Link>
-          <Link to='/'>Aannemen</Link>
-          <Link to='/'>Klussen</Link>
-        </div>
-        <div>
-          <h3>Bedrijf</h3>
-          <Link to='/'>Bouwen</Link>
-          <Link to='/'>Renoveren</Link>
-          <Link to='/'>Aannemen</Link>
-          <Link to='/'>Klussen</Link>
-        </div>
-        <div>
-          <h3>Media</h3>
-          <Link to='/'>Bouwen</Link>
-          <Link to='/'>Renoveren</Link>
-          <Link to='/'>Aannemen</Link>
-          <Link to='/'>Klussen</Link>
-        </div>
-        <div>
-          <h3>Contact</h3>
-          <Link to='/'>Bouwen</Link>
-          <Link to='/'>Renoveren</Link>
-          <Link to='/'>Aannemen</Link>
-          <Link to='/'>Klussen</Link>
-        </div>
-        <div>
-          <h3>Help</h3>
-          <Link to='/'>Bouwen</Link>
-          <Link to='/'>Renoveren</Link>
-          <Link to='/'>Aannemen</Link>
-          <Link to='/'>Klussen</Link>
-        </div>
-        <div>
-          <h3>Social</h3>
-          <Link to='/'>Bouwen</Link>
-          <Link to='/'>Renoveren</Link>
-          <Link to='/'>Aannemen</Link>
-          <Link to='/'>Klussen</Link>
-        </div>
+        {data.sections.map(section=>{
+
+          return(
+          <div key={`section-${section.id}`}>
+            <h3>{section.header}</h3>
+          {section.links.map((link,i)=>{
+            return (
+              <Link to='/' key={`${link}-${i}-${Math.random(100)}`}>{link}</Link>
+            )
+          })}
+          </div>
+          
+        )})}   
       </Lists>
        <Copy>
           <Para>
-            &copy; 2020 Copyright Michal Antczak. Alle rechten voorbehoud.
+            &copy; {data.copyright}
           </Para>
       </Copy>
     </Container>
@@ -141,6 +113,7 @@ const Lists = styled.div`
       line-height: 1.3;
       font-size: 1.9rem;
       margin-bottom: .9rem;
+      
     }
 
     a{
@@ -151,6 +124,7 @@ const Lists = styled.div`
       color: ${p=>p.theme.grey3};
       line-height: 1.3;
       font-size: 1.9rem;
+      text-transform: capitalize;
     }
   }
 `
