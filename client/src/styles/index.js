@@ -10,6 +10,14 @@ import {
     ButtonEmpty,
 } from "./buttons";
 import { Section, Content } from "./containers";
+import {
+    Para1,
+    Headline1,
+    Headline2,
+    Para2,
+    Headline3,
+    Headline4,
+} from "./typography";
 
 export {
     colorsLight,
@@ -24,4 +32,10 @@ export {
     ButtonEmpty,
     Section,
     Content,
+    Para1,
+    Headline1,
+    Headline2,
+    Para2,
+    Headline3,
+    Headline4,
 };

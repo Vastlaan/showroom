@@ -54,7 +54,7 @@ const Container = styled.div`
   position: relative;
   
 
-  ${()=>respond('l','padding: 2.3rem 0;')}
+  ${()=>respond('l','padding: 0 0;')}
 
 `
 const HorizontalLayout = styled.div`

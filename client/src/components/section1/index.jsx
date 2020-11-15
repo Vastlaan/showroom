@@ -38,13 +38,13 @@ export default function Section1() {
 }
 
 const Grid = styled.div`
+  padding: 0 4.7rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1,1fr);
-  grid-template-rows: repeat(3,1fr);
+  
 
-  ${()=>respond('l',`grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(3,1fr);`)}
+  ${()=>respond('l',`grid-template-columns: repeat(3,1fr);`)}
 
 
 `
@@ -64,6 +64,7 @@ const Info = styled.div`
     font-weight: 700;
     color: ${p=>p.theme.primary3};
     line-height: 1.3;
+    text-align: center;
 
     ${()=>respond('l','font-size: 3.3rem;line-height: 1.2;')}
 
