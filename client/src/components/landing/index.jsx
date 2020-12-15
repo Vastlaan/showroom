@@ -4,54 +4,26 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import Layout from "../layout";
 import ReactGA from "react-ga";
-import {fonts, respond} from '../../styles'
+import {fonts, respond, Headline1} from '../../styles'
 
 export default function () {
     ReactGA.pageview("/");
 
     return (
         <Layout>
+            <Headline1>IT Context Example Compositions</Headline1>
             <Menu>
                 <ul>
-                    <h3>Ready Compositions</h3>
-                    <Link to='/example-1'>Example 1</Link>
-                    <Link to='/example-2'>Example 2</Link>
-                    <Link to='/example-3'>Example 3</Link>
+                    <h3>Minimalisme</h3>
+                    <p>Websites ontworpen door het creëren van een tegenstelling tussen de omgeving en onderwerp, die geexponeerd is. 
+                        Heel vaak heeft dat gevolgen in schon ontwerp, met weinig emoties en  </p>
+                    <Link to='/template-1'>Template-1</Link>
                 </ul>
                 <ul>
-                    <h3>Headers</h3>
-                    <Link to='/header-1'>Header 1</Link>
-                    <Link to='/header-2'>Header 2</Link>
-                    <Link to='/header-3'>Header 3</Link>
-                    <Link to='/header-4'>Header 4</Link>
+                    <h3>IT Context Example Compositions</h3>
+                    <Link to='/template-1'>Template-2</Link>
                 </ul>
-                <ul>
-                    <h3>Articles</h3>
-                    <Link to='/article-1'>Article 1</Link>
-                    <Link to='/article-2'>Article 2</Link>
-                </ul>
-                <ul>
-                    <h3>Sections</h3>
-                    <Link to='/overlapping-1'>Section Overlapping 1</Link>
-                    <Link to='/intersection-1'>Intersection 1</Link>
-                    <Link to='/intersection-2'>Intersection 2</Link>
-                    <Link to='/section-rank'>Section Rank</Link>
-                </ul>
-                <ul>
-                    <h3>Buttons</h3>
-                    <Link to='/buttons'>Buttons</Link>
-                    <Link to='/button-menu'>Button Menu</Link>
-                </ul>
-                <ul>
-                    <h3>Navigations</h3>
-                    <Link to='/nav-1'>Navigation 1</Link>
-                    <Link to='/nav-2'>Navigation 2</Link>
-                    <Link to='/nav-3'>Navigation 3</Link>
-                </ul>
-                <ul>
-                    <h3>Menus</h3>
-                    <Link to='/menu-side-1'>Menu Side 1</Link>
-                </ul>
+               
             </Menu>
         </Layout>
     );

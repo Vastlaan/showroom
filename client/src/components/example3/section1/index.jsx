@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import {fonts, respond, Section, Content} from '../../styles'
-import Img1 from '../../img/shine-1.png'
-import Img2 from '../../img/shine-2.png'
-import Img3 from '../../img/shine-3.png'
-import Decoration from '../decorative2'
+import {fonts, respond, Section, Content} from '../../../styles'
+import Img1 from '../../../img/shine-1.png'
+import Img2 from '../../../img/shine-2.png'
+import Img3 from '../../../img/shine-3.png'
+import Decoration from '../../decorative2'
 
 export default function Section1() {
   return (
@@ -38,7 +38,7 @@ export default function Section1() {
 }
 
 const Grid = styled.div`
-  padding: 0 4.7rem;
+  padding: 9rem 4.7rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1,1fr);

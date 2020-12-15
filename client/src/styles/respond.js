@@ -18,11 +18,11 @@ export function respond(type, content) {
     ${content}
   }`;
     } else if (type === "xl") {
-        return `@media only screen and (min-width: 1366px){
+        return `@media only screen and (min-width: 1255px){
     ${content}
   }`;
     } else if (type === "xxl") {
-        return `@media only screen and (min-width: 1662px){
+        return `@media only screen and (min-width: 1439px){
     ${content}
   }`;
     } else if (type === "tv") {

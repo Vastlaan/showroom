@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import {respond, Section, Content, ButtonFull, Para1, Headline2} from '../../styles'
-import Img from '../../img/shine-4.jpg'
-import Decoration from '../decorative2'
+import {respond, Section, ButtonFull, Para1, Headline2} from '../../../styles'
+import Img from '../../../img/shine-4.jpg'
+import Decoration from '../../decorative2'
 
 export default function Section2() {
   return (
     <Section>
-      <Content>
         <BackgroundImg>
           <Separator/>
           <Bulk>
@@ -16,16 +15,15 @@ export default function Section2() {
             <ButtonFull color='#AC4B44' color2='white'>Lees meer</ButtonFull>
           </Bulk>
         </BackgroundImg>
-      </Content>
       <Decoration gap='1.3rem' style={{position:'absolute', bottom: '100%', left: 0}}/>
     </Section>
   )
 }
 const BackgroundImg = styled.div`
+  margin-top: 9rem;
   background: transparent url(${Img}) no-repeat top;
   background-size: auto 80%;
   width: 100%;
-  height: 70rem;  //test
   display: flex;
   flex-direction: column-reverse;
 
@@ -47,12 +45,19 @@ const Bulk = styled.div`
   padding: 4.7rem 2.3rem;
   background-color: white;
   height: 50%;
+  align-items: center;
 
-  ${()=>respond('l','height: 70%;')}
+  ${()=>respond('l','height: 70%;align-items: flex-start;')}
 
   button{
-    max-width: 20rem;
+    margin-top: 2.7rem;
+    max-width: 23rem;
   }
+
+  h3{
+    margin-bottom: 2.7rem;
+  }
+  
 
 
 `

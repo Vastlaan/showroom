@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {respond} from '../../styles'
 
 export default function Decorative1({style, color, gap}) {
 
@@ -127,10 +128,12 @@ export default function Decorative1({style, color, gap}) {
 }
 
 const Net = styled.div`
-  display: grid;
+  display: none;
   grid-template-columns: repeat(10, 5px);
   grid-template-rows: repeat(10, 5px);
   grid-gap: ${p=>p.gap?p.gap:'5px'};
+
+  ${()=>respond('xl','display: grid;')}
 
   div{
     width: 5px;

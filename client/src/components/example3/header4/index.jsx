@@ -1,20 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import Img from '../../img/shine-header.png'
-import {fonts, respond, ButtonFull, ButtonEmpty, Section, Content, Para1, Headline1} from '../../styles'
+import Img from '../../../img/shine-header.png'
+import {fonts, respond, ButtonFull, ButtonEmpty, Section, Para1, Headline1} from '../../../styles'
 
 export default function Header4() {
   return (
-    <Section>
-      <Content>
+    
+      
         <Header>
           <Info>
             <Headline1>
               Cleaning <span>Services</span>
             </Headline1>
             <Para1>
-              Solid betrouwbaar en betrokken schoonmakers. Altijd betaalbaar diensten waneer je dat nodig hebt.
+              Het is een voorbeeld tekst. Solid betrouwbaar en betrokken schoonmakers. Altijd betaalbaar diensten waneer je dat nodig hebt.
             </Para1>
             <Buttons>
               <ButtonFull color='#AC4B44' color2='white'>Oferte</ButtonFull>
@@ -25,18 +25,17 @@ export default function Header4() {
             <img src={Img} alt="supervisor"/>
           </Image>
         </Header>
-      </Content>
-    </Section>
+
   )
 }
 
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
   flex-direction: column-reverse;
-  padding: 1rem 2.7rem;
+  padding: 9rem 2.7rem;
 
   ${()=>respond('l','flex-direction: row;')}
-  ${()=>respond('xl','padding: 1rem;')}
+  ${()=>respond('xl','padding: 9rem 2.7rem;')}
 
 `
 
@@ -44,6 +43,9 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  ${()=>respond('l','align-items: flex-start;')}
 
 `
 
@@ -59,7 +61,7 @@ const Image =styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${()=>respond('m','max-width: 70%;')}
+  ${()=>respond('m','max-width: 100%;')}
   ${()=>respond('l','max-width: 50%;')}
 
   img{

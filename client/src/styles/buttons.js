@@ -165,7 +165,7 @@ export const SocialButton1 = styled.button`
 `;
 
 export const ButtonFull = styled.button`
-    padding: 1.1rem 2.7rem;
+    padding: 1.9rem 4.7rem;
     background-color: ${(p) => (p.color ? p.color : p.theme.grey7)};
     color: ${(p) => (p.color2 ? p.color2 : p.theme.grey1)};
     border: 1px solid transparent;
@@ -176,6 +176,17 @@ export const ButtonFull = styled.button`
     cursor: pointer;
     transition: all 0.3s;
     margin: 1rem 1rem 1rem 0;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ${() =>
+        respond(
+            "l",
+            "padding: 1.1rem 2.7rem;letter-spacing: initial; text-transform: capitalize;"
+        )}
 
     &:hover {
         background-color: transparent;
@@ -188,7 +199,7 @@ export const ButtonFull = styled.button`
     }
 `;
 export const ButtonEmpty = styled.button`
-    padding: 1.1rem 2.7rem;
+    padding: 1.9rem 4.7rem;
     background-color: transparent;
     color: ${(p) => (p.color ? p.color : p.theme.grey7)};
     border: 1px solid ${(p) => (p.color ? p.color : p.theme.grey7)};
@@ -199,6 +210,16 @@ export const ButtonEmpty = styled.button`
     cursor: pointer;
     transition: all 0.3s;
     margin: 1rem 1rem 1rem 0;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+
+    ${() =>
+        respond(
+            "l",
+            "padding: 1.1rem 2.7rem;letter-spacing: initial; text-transform: capitalize;"
+        )}
 
     &:hover {
         background-color: ${(p) => (p.color ? p.color : p.theme.grey7)};
