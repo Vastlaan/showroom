@@ -9,7 +9,7 @@ export default function Navigation() {
 
       <Link to='/template-1'>
         <Logo>
-          <h1>Administratie Bedrijf</h1>
+          <h1>Bedrijf's <span>Logo</span></h1>
         </Logo>
       </Link>
       
@@ -33,13 +33,16 @@ const Container = styled.nav`
   width: 100%;
   display: flex;
   z-index: 99;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.1));
+  //background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1));
+  background-color: ${p=>p.theme.grey1};
+  border-left: 5px solid ${p=>p.theme.yellow};
+
   
 `
 const Logo = styled.div`
 
 cursor: pointer;
-margin: 1.4rem;
+margin: 0 1.4rem;
 
   h1{
     font-size: 3.6rem;
@@ -47,12 +50,16 @@ margin: 1.4rem;
     color: white;
     transition: all .3s;
     line-height: 1;
+
+    span{
+      color: ${p=>p.theme.yellow};
+    }
   }
 
 `
 const Links = styled.ul`
 
-  margin: 0 1.4rem 1.4rem auto;
+  margin: 0 1.4rem .6rem auto;
   list-style: none;
   display: flex;
 
@@ -67,7 +74,7 @@ const Links = styled.ul`
     min-width: 10rem;
     text-align: center;
     margin: 0 .6rem;
-    padding-top: 1.4rem;
+    padding-top: 2.7rem;
     font-size: 1.4rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -88,7 +95,7 @@ const Links = styled.ul`
       position: absolute;
       top: -90%;
       left: 0;
-      background-color: white;
+      background-color: ${p=>p.theme.yellow};
       transition: all .3s;
       z-index: -1;
     }

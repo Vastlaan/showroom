@@ -7,3 +7,8 @@ export const Content = styled.div`
     max-width: 1255px;
     margin: 0 auto;
 `;
+export const Line = styled.div`
+    width: 20rem;
+    height: 2px;
+    background-color: white;
+`;

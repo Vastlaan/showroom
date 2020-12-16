@@ -125,6 +125,14 @@ export const HeadlineB1 = styled.h1`
     font-weight: 300;
     text-align: ${(p) => (p.align ? p.align : "left")};
 `;
+export const HeadlineB2 = styled.h1`
+    font-size: 6rem;
+    font-family: ${fonts.heading1};
+    color: ${(p) => (p.color ? p.color : "white")};
+    font-weight: 900;
+    text-align: ${(p) => (p.align ? p.align : "center")};
+    text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.9);
+`;
 export const ParaB1 = styled.p`
     font-size: 1.7rem;
     font-family: ${fonts.heading1};

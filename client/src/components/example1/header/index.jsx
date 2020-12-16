@@ -2,13 +2,13 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import Img from '../../../img/header.jpg'
-import {respond, fonts, HeadlineB1, ParaB1, ButtonBSecondary} from '../../../styles'
+import {respond, fonts, HeadlineB1, ParaB1, ButtonBSecondary, Line} from '../../../styles'
 
 export default function Header() {
   return (
     <BackgroundImage>
       <HeadlineB1>Jouw slogan gaat here</HeadlineB1>
-      <Line></Line>
+      <Line/>
       <ParaB1 align='center'>Deze webiste template werd gemaakt door IT Context. Wij zijn trots op onze ontwerpen. Heeft u op maat gemakt website nodig? Dat is ook mogelijk, neem een contact met ons mee.</ParaB1>
       <ButtonBSecondary color="#f4c700">
         Lees meer
@@ -30,9 +30,4 @@ const BackgroundImage = styled.header`
   p{
     margin: 1.4rem auto;
   }
-`
-const Line = styled.div`
-  width: 20rem;
-  height: 2px;
-  background-color: white;
 `

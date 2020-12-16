@@ -243,7 +243,7 @@ export const ButtonBPrimary = styled.button`
 
     &:hover {
         background-color: ${(p) => (p.color ? p.color : "white")};
-        color: black;
+        color: ${(p) => (p.color2 ? p.color2 : "black")};
     }
     &:focus,
     :active {
@@ -254,7 +254,7 @@ export const ButtonBSecondary = styled.button`
     background-color: ${(p) => (p.color ? p.color : "white")};
     border: 2px solid ${(p) => (p.color ? p.color : "white")};
     padding: 0.4rem 1.4rem;
-    color: black;
+    color: ${(p) => (p.color2 ? p.color2 : "black")};
     font-size: 1.7rem;
     cursor: pointer;
     transition: all 0.3s;

@@ -106,6 +106,9 @@ const Info = styled.div`
     font-size: 3.3rem;
     line-height: 1;
     color: ${p=>p.theme.grey7};
+    text-align:center;
+    max-width: 35rem;
+    min-width: 35rem;
 
   }
   h4{
@@ -114,6 +117,9 @@ const Info = styled.div`
     font-weight: 400;
     color: ${p=>p.theme.grey7};
     margin-bottom: 2.7rem;
+    text-align:center;
+    max-width: 35rem;
+    min-width: 35rem;
   }  
 `
 
@@ -124,7 +130,10 @@ const Address = styled.div`
     padding: .9rem;
     align-items: center;
     border: 1px solid ${p=>p.theme.grey7};
-    width: 35rem;
+    min-width: 35rem;
+    max-width: 35rem;
+
+    ${()=>respond('l','font-size: 1.9rem; text-align: center;')}
 
     p{
       font-size: 2.3rem;
@@ -132,7 +141,8 @@ const Address = styled.div`
       color: ${p=>p.theme.grey7};
       font-weight: 600;
       margin: .9rem 0;
-      ${()=>respond('l','font-size: 1.9rem;')}
+      text-align: center;
+      ${()=>respond('l','font-size: 1.9rem; text-align: center;')}
       
     }
     div{

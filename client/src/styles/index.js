@@ -11,7 +11,7 @@ import {
     ButtonBPrimary,
     ButtonBSecondary,
 } from "./buttons";
-import { Section, Content } from "./containers";
+import { Section, Content, Line } from "./containers";
 import {
     Para1,
     Headline1,
@@ -20,6 +20,7 @@ import {
     Headline3,
     Headline4,
     HeadlineB1,
+    HeadlineB2,
     ParaB1,
 } from "./typography";
 
@@ -36,6 +37,7 @@ export {
     ButtonEmpty,
     Section,
     Content,
+    Line,
     Para1,
     Headline1,
     Headline2,
@@ -43,6 +45,7 @@ export {
     Headline3,
     Headline4,
     HeadlineB1,
+    HeadlineB2,
     ParaB1,
     ButtonBPrimary,
     ButtonBSecondary,

@@ -11,6 +11,8 @@ export const colorsLight = {
     primary3: "#524239",
     secondary3: "#AC4B44",
 
+    yellow: "#f4c700",
+
     grey1: "#202020",
     grey2: "#343434",
     grey3: "#4F4F4F",
