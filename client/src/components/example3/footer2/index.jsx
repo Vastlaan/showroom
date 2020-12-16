@@ -51,7 +51,7 @@ export default function Footer2() {
                   </h3>
                   {section.links.map((link,i)=>{
                     return(
-                      <Link key={`${link}-${i}-${Math.random(100)}`} to={`/template-1`}>{link}</Link>
+                      <Link key={`${link}-${i}-${Math.random(100)}`} to={`/template-3`}>{link}</Link>
                     )
                   })}
                 </div>

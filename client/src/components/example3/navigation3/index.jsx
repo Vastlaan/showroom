@@ -20,7 +20,7 @@ export default function Navigation3() {
             <BsThreeDotsVertical/>
           </Icon>
 
-          <Link to='/template-1'>
+          <Link to='/template-3'>
             <Logo>
               <img src={LogoImage} alt="logo"/>
             </Logo>
@@ -30,16 +30,16 @@ export default function Navigation3() {
         
 
         <Menu visible={isVisible}>
-          <Link style={{transition: 'all 1.1s'}} to='/template-1'>
+          <Link style={{transition: 'all 1.1s'}} to='/template-3'>
             Bedrijf
           </Link>
-          <Link style={{transition: 'all .9s'}} to='/template-1'>
+          <Link style={{transition: 'all .9s'}} to='/template-3'>
             Diensten
           </Link>
-          <Link style={{transition: 'all .7s'}} to='/template-1'>
+          <Link style={{transition: 'all .7s'}} to='/template-3'>
             Contact
           </Link>
-          <Link style={{transition: 'all .5s'}} to='/template-1'>
+          <Link style={{transition: 'all .5s'}} to='/template-3'>
             <ButtonFull color='#AC4B44' color2='white'>Oferte</ButtonFull>
           </Link>
         </Menu>

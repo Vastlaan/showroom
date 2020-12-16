@@ -17,13 +17,14 @@ export default function () {
                     <h3>Minimalisme</h3>
                     <p>Websites ontworpen door het creëren van een tegenstelling tussen de omgeving en onderwerp, die geexponeerd is. 
                         Heel vaak heeft dat gevolgen in schon ontwerp, met weinig emoties en  </p>
-                    <Link to='/template-1'>Template-1</Link>
+                    <Link to='/template-3'>Template-3</Link>
                 </ul>
                 <ul>
-                    <h3>IT Context Example Compositions</h3>
-                    <Link to='/template-1'>Template-2</Link>
+                    <h3>Classic</h3>
+                    <p>Websites ontworpen door het creëren van een tegenstelling tussen de omgeving en onderwerp, die geexponeerd is. 
+                        Heel vaak heeft dat gevolgen in schon ontwerp, met weinig emoties en  </p>
+                    <Link to='/template-1'>Template-1</Link>
                 </ul>
-               
             </Menu>
         </Layout>
     );

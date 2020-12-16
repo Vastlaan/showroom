@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import Img from '../../../img/shine-header.png'
 import {fonts, respond, ButtonFull, ButtonEmpty, Section, Para1, Headline1} from '../../../styles'

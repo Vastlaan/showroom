@@ -6,6 +6,7 @@ import ThemeProvider from "./global/themeProvider";
 import StateProvider from "./global/stateProvider";
 import Landing from "./components/landing";
 import Example3 from "./components/example3";
+import Example1 from "./components/example1";
 
 function App() {
     // //initialize analytics
@@ -22,6 +23,11 @@ function App() {
                             <Route
                                 exact
                                 path="/template-1"
+                                render={() => <Example1 />}
+                            />
+                            <Route
+                                exact
+                                path="/template-3"
                                 render={() => <Example3 />}
                             />
                         </Switch>

@@ -117,3 +117,19 @@ export const Headline4 = styled.h3`
 
     ${() => respond("l", "font-size: 2.7rem;")}
 `;
+
+export const HeadlineB1 = styled.h1`
+    font-size: 4.5rem;
+    font-family: ${fonts.heading1};
+    color: ${(p) => (p.color ? p.color : "white")};
+    font-weight: 300;
+    text-align: ${(p) => (p.align ? p.align : "left")};
+`;
+export const ParaB1 = styled.p`
+    font-size: 1.7rem;
+    font-family: ${fonts.heading1};
+    color: ${(p) => (p.color ? p.color : "white")};
+    font-weight: 300;
+    text-align: ${(p) => (p.align ? p.align : "left")};
+    max-width: 45rem;
+`;

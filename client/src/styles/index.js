@@ -8,6 +8,8 @@ import {
     Button3,
     ButtonFull,
     ButtonEmpty,
+    ButtonBPrimary,
+    ButtonBSecondary,
 } from "./buttons";
 import { Section, Content } from "./containers";
 import {
@@ -17,6 +19,8 @@ import {
     Para2,
     Headline3,
     Headline4,
+    HeadlineB1,
+    ParaB1,
 } from "./typography";
 
 export {
@@ -38,4 +42,8 @@ export {
     Para2,
     Headline3,
     Headline4,
+    HeadlineB1,
+    ParaB1,
+    ButtonBPrimary,
+    ButtonBSecondary,
 };

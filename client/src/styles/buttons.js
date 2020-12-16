@@ -231,3 +231,40 @@ export const ButtonEmpty = styled.button`
         outline: none;
     }
 `;
+
+export const ButtonBPrimary = styled.button`
+    background-color: transparent;
+    border: 2px solid ${(p) => (p.color ? p.color : "white")};
+    padding: 0.4rem 1.4rem;
+    color: ${(p) => (p.color ? p.color : "white")};
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: ${(p) => (p.color ? p.color : "white")};
+        color: black;
+    }
+    &:focus,
+    :active {
+        outline: none;
+    }
+`;
+export const ButtonBSecondary = styled.button`
+    background-color: ${(p) => (p.color ? p.color : "white")};
+    border: 2px solid ${(p) => (p.color ? p.color : "white")};
+    padding: 0.4rem 1.4rem;
+    color: black;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: transparent;
+        color: ${(p) => (p.color ? p.color : "white")};
+    }
+    &:focus,
+    :active {
+        outline: none;
+    }
+`;
