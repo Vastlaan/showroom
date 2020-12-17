@@ -1,6 +1,4 @@
 import React, {useRef, useEffect, useState} from 'react'
-import styled from 'styled-components'
-import Layout from '../layout'
 import Nav from './nav'
 import Header from './header'
 import Carousel from './carousel'
@@ -9,8 +7,7 @@ import VideoBackground from './utils/videoBackground'
 import Subscribe from './subscribe'
 import Team from './team'
 import Portfolio from './portfolio'
-import {respond} from '../../styles'
-import portfolio from './portfolio'
+import Footer from './footer'
 
 export default function Example1() {
 
@@ -23,6 +20,10 @@ export default function Example1() {
   useEffect(()=>{
 
     function setView(){
+
+      if(portfolio.current.offsetTop - window.scrollY < window.innerHeight / 2){
+        return setInSight('portfolio')
+      }
 
       if(team.current.offsetTop - window.scrollY < window.innerHeight / 2){
         return setInSight('team')
@@ -62,6 +63,7 @@ export default function Example1() {
       />
       <Team ref={team}/>
       <Portfolio ref={portfolio}/>
+      <Footer/>
     </>
       
   )

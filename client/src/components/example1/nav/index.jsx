@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import {respond, fonts} from '../../../styles'
+import { fonts} from '../../../styles'
 
-export default function Navigation({inSight, setInSight}) {
+export default function Navigation({inSight}) {
 
   function scrollToElement(id){
     document.querySelector(`#${id}`).scrollIntoView({behavior: "smooth"})
@@ -22,8 +22,6 @@ export default function Navigation({inSight, setInSight}) {
         <Link to='/template-1' onClick={()=>scrollToElement('newsletter')}><Pass highlighted={inSight==='newsletter'}>newsletter</Pass></Link>
         <Link to='/template-1' onClick={()=>scrollToElement('team')}><Pass highlighted={inSight==='team'}>onze team</Pass></Link>
         <Link to='/template-1' onClick={()=>scrollToElement('portfolio')}><Pass highlighted={inSight==='portfolio'}>portfolio</Pass></Link>
-        <Link to='/template-1'><Pass highlighted={inSight==='i'}>over ons</Pass></Link>
-        <Link to='/template-1'><Pass highlighted={inSight==='d'}>blog</Pass></Link>
       </Links>
       
     </Container>
@@ -85,7 +83,7 @@ const Pass = styled.li`
     font-weight: 300;
     text-transform: uppercase;
     font-family: ${fonts.heading1};
-    color: white;
+    color: ${p=>p.highlighted?'black':'white'};
     transition: all .3s;
     line-height: 1.6;
     position: relative;
