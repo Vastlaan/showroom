@@ -19,7 +19,7 @@ export default function VideoBackground({headline, para}) {
 
 const Container = styled.div`
   width: 100%;
-  height: 32rem;
+  height: 48rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

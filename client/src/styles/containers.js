@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 export const Section = styled.section`
     position: relative;
+    padding: 9rem 1.4rem;
+`;
+export const SectionNarrow = styled.section`
+    max-width: 1255px;
+    margin: 0 auto;
+    padding: 9rem 1.4rem;
 `;
 export const Content = styled.div`
     max-width: 1255px;

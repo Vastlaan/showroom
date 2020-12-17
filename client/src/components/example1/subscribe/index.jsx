@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import Heading from '../utils/heading'
 import {ButtonBSecondary, fonts} from '../../../styles'
 
-export default function Subscribe() {
+function Subscribe(props, ref) {
 
   function submitContactForm(e){
     e.preventDefault();
   }
 
   return (
-    <Container>
+    <Container ref={ref} id="newsletter">
       <Heading headline='Neem contact met ons mee' para='Subscribe voor onze newsletter en blijf op de hoogte van onze aanbiedingen.'/>
       <Form onSubmit={submitContactForm}>
         <label>
@@ -22,6 +22,10 @@ export default function Subscribe() {
     </Container>
   )
 }
+
+export default React.forwardRef(Subscribe)
+
+
 const Container = styled.section`
 
   display: flex;

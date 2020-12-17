@@ -3,7 +3,11 @@ import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import {respond, fonts} from '../../../styles'
 
-export default function Navigation() {
+export default function Navigation({inSight, setInSight}) {
+
+  function scrollToElement(id){
+    document.querySelector(`#${id}`).scrollIntoView({behavior: "smooth"})
+  }
   return (
     <Container>
 
@@ -13,13 +17,13 @@ export default function Navigation() {
         </Logo>
       </Link>
       
-      <Links>
-        <Link to='/template-1'><li>diensten</li></Link>
-        <Link to='/template-1'><li>newsletter</li></Link>
-        <Link to='/template-1'><li>onze team</li></Link>
-        <Link to='/template-1'><li>portfolio</li></Link>
-        <Link to='/template-1'><li>over ons</li></Link>
-        <Link to='/template-1'><li>blog</li></Link>
+      <Links inSight={inSight}>
+        <Link to='/template-1' onClick={()=>scrollToElement('carousel')}><Pass highlighted={inSight==='carousel'}>diensten</Pass></Link>
+        <Link to='/template-1' onClick={()=>scrollToElement('newsletter')}><Pass highlighted={inSight==='newsletter'}>newsletter</Pass></Link>
+        <Link to='/template-1' onClick={()=>scrollToElement('team')}><Pass highlighted={inSight==='team'}>onze team</Pass></Link>
+        <Link to='/template-1' onClick={()=>scrollToElement('portfolio')}><Pass highlighted={inSight==='portfolio'}>portfolio</Pass></Link>
+        <Link to='/template-1'><Pass highlighted={inSight==='i'}>over ons</Pass></Link>
+        <Link to='/template-1'><Pass highlighted={inSight==='d'}>blog</Pass></Link>
       </Links>
       
     </Container>
@@ -68,8 +72,10 @@ const Links = styled.ul`
     height:100%;
   }
   
+`
 
-  li{
+const Pass = styled.li`
+
     max-width: 10rem;
     min-width: 10rem;
     text-align: center;
@@ -93,7 +99,7 @@ const Links = styled.ul`
       width: 100%;
       height:100%;
       position: absolute;
-      top: -90%;
+      top: ${p=>p.highlighted?0:'-90%'};
       left: 0;
       background-color: ${p=>p.theme.yellow};
       transition: all .3s;
@@ -108,5 +114,4 @@ const Links = styled.ul`
         top:0;
       }
     }
-  }
 `
