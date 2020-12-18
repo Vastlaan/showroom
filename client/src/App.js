@@ -7,6 +7,8 @@ import StateProvider from "./global/stateProvider";
 import Landing from "./components/landing";
 import Example3 from "./components/example3";
 import Example1 from "./components/example1";
+import Example2 from "./components/example2";
+import Example4 from "./components/example4";
 
 function App() {
     // //initialize analytics
@@ -27,8 +29,18 @@ function App() {
                             />
                             <Route
                                 exact
+                                path="/template-2"
+                                render={() => <Example2 />}
+                            />
+                            <Route
+                                exact
                                 path="/template-3"
                                 render={() => <Example3 />}
+                            />
+                            <Route
+                                exact
+                                path="/template-4"
+                                render={() => <Example4 />}
                             />
                         </Switch>
                     </Router>

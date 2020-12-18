@@ -11,7 +11,13 @@ import {
     ButtonBPrimary,
     ButtonBSecondary,
 } from "./buttons";
-import { Section, Content, Line, SectionNarrow } from "./containers";
+import {
+    Section,
+    Content,
+    ContentWidth,
+    Line,
+    SectionNarrow,
+} from "./containers";
 import {
     Para1,
     Headline1,
@@ -38,6 +44,7 @@ export {
     Section,
     SectionNarrow,
     Content,
+    ContentWidth,
     Line,
     Para1,
     Headline1,

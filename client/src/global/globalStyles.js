@@ -40,4 +40,66 @@ const GlobalStyles = createGlobalStyle`
     a{
         text-decoration: none;
     }
+
+
+    @keyframes showUp{
+        0%{
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
+        }
+        100%{
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+    }
+    @keyframes showUpPlain{
+        0%{
+            opacity: 0;
+            visibility: hidden;
+            
+        }
+        100%{
+            opacity: 1;
+            visibility: visible;
+            
+        }
+    }
+     @keyframes showUpRight{
+        0%{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10rem);
+        }
+        100%{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+    }
+    @keyframes showUpLeft{
+        0%{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10rem);
+        }
+        100%{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+    }
+    @keyframes showUpBottom{
+        0%{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10rem);
+        }
+        100%{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
 `;

@@ -21,6 +21,8 @@ export const colorsLight = {
     grey6: "#bdc3c7",
     grey7: "#ecf0f1",
     grey8: "#f8f9fa",
+
+    greyT1: "#DCE0E1",
 };
 export const colorsDark = {
     primary: "#34495E",
