@@ -1,39 +1,36 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import {fonts, respond} from '../../../styles'
+import {fonts, respond, ButtonT4} from '../../../styles'
 
-export default function Navigation() {
+export default function Navigation({data}) {
 
   const [active, setActive] = useState("")
 
-  useEffect(()=>{
-    console.log(process.env.NODE_ENV)
-  },[])
   return (
     <Container>
-      <Logo>T-Lex</Logo>
+      <Logo><span>T</span>4</Logo>
       <List>
-        {links.map(l=>{
-          return <Item key={l.id} onMouseEnter={()=>setActive(l.id)} onMouseLeave={()=>setActive("")} >
+        {data.map(l=>{
+          return <Item key={`link-${l.id}-${l.name}`} onMouseEnter={()=>setActive(l.id)} onMouseLeave={()=>setActive("")} >
               <Link to={l.url}>
                 <Li>
                   {l.name}
                   
                 </Li>
-                {l.subs && <Sublist  id={l.id} active={active}>
+                
+              </Link>
+              {l.subs.length>0 && <Sublist  id={l.id} active={active}>
                     {l.subs.map(s=>{
-                      return <Link to={s.url}><li key={s.id}>{s.name}</li></Link>
+                      return <Link key={`sub-${s.id}-${s.name}`} to={s.url}><li >{s.name}</li></Link>
                     })}
                   </Sublist>}
-              </Link>
-              
             </Item> 
         })}
       </List>
-      <Button onClick={()=>window.location.href='https://itcontext.nl/contact'}>
+      <ButtonT4 onClick={()=>window.location.href='https://itcontext.nl/contact'}>
         Bestellen
-      </Button>
+      </ButtonT4>
     </Container>
   )
 }
@@ -42,7 +39,7 @@ const Container = styled.nav`
   width: 100%;
   display: flex;
   padding: 0 1.4rem;
-  background-color: #F7F9F6;
+  background-image: linear-gradient(to right, #F7F9F6,#F7F9F6 30%);
   position: fixed;
   top: 0;
   left: 0;
@@ -57,6 +54,11 @@ const Logo = styled.div`
   font-size: 4rem;
   font-weight: 300;
   //text-shadow: .2rem .2rem .1rem rgba(0,0,0,.3);
+
+  span{
+    color: ${p=>p.theme.primary};
+    font-weight: 600;
+  }
 `
 const Item = styled.div`
   height: 100%;
@@ -120,69 +122,52 @@ const List = styled.ul`
   align-items: center;
   margin:0 1.4rem 0 auto;
 `
-const Button = styled.button`
-  position: static;
-  z-index: 2;
-  margin: .5rem 0;
-  border: 1px solid black;
-  padding: 1.5rem 4rem;
-  background-color: transparent;
-  font-family: ${fonts.roboto};
-  font-size: 1.7rem;
-  color: black;
-  align-self: center;
-  cursor: pointer;
-  transition: all .3s;
-
-  &:hover{
-    background-color: white;
-  }
-`
 
 
-const links = [
-  {
-    id: "link-1",
-    name: "Blog",
-    subs: [
-      {
-        id: "blog-cat-1",
-        name: "Adventure",
-        url: "/template-4"
-      },
-      {
-        id: "blog-cat-2",
-        name: "Politic",
-        url: "/template-4"
-      },
-    ],
-    url: '/template-4'
-  },
-  {
-    id: "link-2",
-    name: "Shop",
-    url: '/template-4',
-    subs: [
-      {
-        id: "blog-cat-1",
-        name: "Levering",
-        url: "/template-4"
-      },
-      {
-        id: "blog-cat-2",
-        name: "Betaling",
-        url: "/template-4"
-      },
-      {
-        id: "blog-cat-3",
-        name: "Voorwaarden",
-        url: "/template-4"
-      },
-    ],
-  },
-  {
-    id: "link-3",
-    name: "Products",
-    url: '/template-4'
-  }
-]
+
+// const links = [
+//   {
+//     id: "link-1",
+//     name: "Blog",
+//     subs: [
+//       {
+//         id: "blog-cat-1",
+//         name: "Adventure",
+//         url: "/template-4"
+//       },
+//       {
+//         id: "blog-cat-2",
+//         name: "Politic",
+//         url: "/template-4"
+//       },
+//     ],
+//     url: '/template-4'
+//   },
+//   {
+//     id: "link-2",
+//     name: "Shop",
+//     url: '/template-4',
+//     subs: [
+//       {
+//         id: "blog-cat-1",
+//         name: "Levering",
+//         url: "/template-4"
+//       },
+//       {
+//         id: "blog-cat-2",
+//         name: "Betaling",
+//         url: "/template-4"
+//       },
+//       {
+//         id: "blog-cat-3",
+//         name: "Voorwaarden",
+//         url: "/template-4"
+//       },
+//     ],
+//   },
+//   {
+//     id: "link-3",
+//     name: "Products",
+//     url: '/template-4'
+//   }
+// ]

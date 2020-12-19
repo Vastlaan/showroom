@@ -33,6 +33,9 @@ export default function Personel({data}) {
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
+  ${()=>respond('m','flex-direction: row; justify-content: center;')}
 
 `
 

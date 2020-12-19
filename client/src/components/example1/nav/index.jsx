@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import { fonts} from '../../../styles'
+import { fonts, respond} from '../../../styles'
 
 export default function Navigation({inSight}) {
 
@@ -29,7 +29,7 @@ export default function Navigation({inSight}) {
 }
 
 const Container = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -38,6 +38,7 @@ const Container = styled.nav`
   //background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1));
   background-color: ${p=>p.theme.grey1};
   border-left: 5px solid ${p=>p.theme.yellow};
+  -webkit-backface-visibility: hidden;
 
   
 `
@@ -45,6 +46,11 @@ const Logo = styled.div`
 
 cursor: pointer;
 margin: 0 1.4rem;
+display: none;
+
+${()=>respond('m',`
+    display: block;
+  `)}
 
   h1{
     font-size: 3.6rem;
@@ -60,10 +66,13 @@ margin: 0 1.4rem;
 
 `
 const Links = styled.ul`
-
   margin: 0 1.4rem .6rem auto;
   list-style: none;
   display: flex;
+
+  ${()=>respond('m',`
+    
+  `)}
 
   a{
     display: flex;

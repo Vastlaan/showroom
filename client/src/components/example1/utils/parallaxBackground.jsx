@@ -15,7 +15,7 @@ export default function ParallaxBackground({headline, para}) {
 
 const Container = styled.div`
   width: 100%;
-  height: 32rem;
+  height: 48rem;
   background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.3)),url(${Img});
   background-position: center;
   background-repeat: no-repeat;

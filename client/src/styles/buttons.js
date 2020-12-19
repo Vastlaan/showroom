@@ -268,3 +268,22 @@ export const ButtonBSecondary = styled.button`
         outline: none;
     }
 `;
+export const ButtonT4 = styled.button`
+    position: static;
+    z-index: 2;
+    margin: 0.5rem 0;
+    border: 1px solid ${(p) => p.theme.primary};
+    padding: 1.5rem 4rem;
+    background-color: transparent;
+    font-family: ${fonts.roboto};
+    font-size: 1.7rem;
+    color: ${(p) => p.theme.primary};
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: ${(p) => p.theme.primary};
+        color: ${(p) => p.theme.grey7};
+    }
+`;

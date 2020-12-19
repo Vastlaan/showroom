@@ -10,6 +10,7 @@ import {
     ButtonEmpty,
     ButtonBPrimary,
     ButtonBSecondary,
+    ButtonT4,
 } from "./buttons";
 import {
     Section,
@@ -41,6 +42,7 @@ export {
     Button3,
     ButtonFull,
     ButtonEmpty,
+    ButtonT4,
     Section,
     SectionNarrow,
     Content,

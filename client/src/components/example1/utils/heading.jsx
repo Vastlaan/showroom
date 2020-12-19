@@ -39,6 +39,7 @@ const Headline = styled.div`
       font-family: ${fonts.heading1};
       line-height: 1;
       color: #f4c700;
+      text-align: center;
     }
   }
 `

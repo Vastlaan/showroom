@@ -46,16 +46,24 @@ export default function Features() {
 }
 const Container = styled.div`
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto;
   margin: 3.6rem 0;
   position: relative;
+  scrollbar-width: none;
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  
 `
 const Feature = styled.div`
   display:flex;
   flex-direction: column;
-  min-width: calc(25% - 2rem);
+  min-width: calc(100% - 7rem);
   align-items: center;
   margin-right: 2rem;
+
+  ${()=>respond('m','min-width: calc(25% - 2rem);')}
 
   div{
     width: 100%;
