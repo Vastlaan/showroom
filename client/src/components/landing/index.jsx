@@ -18,15 +18,21 @@ export default function () {
                     <p>Websites ontworpen door het creëren van een tegenstelling tussen de omgeving en onderwerp, die geexponeerd is. 
                         Heel vaak heeft dat gevolgen in schon ontwerp, met weinig emoties en  </p>
                     <Link to='/template-2'>Bouwer Minimal</Link>
-                    <Link to='/template-3'>Services Minimal</Link>
+                    <Link to='/template-3'>M1 Services</Link>
                 </ul>
                 <ul>
                     <h3>Classic</h3>
                     <p>Websites ontworpen door het creëren van een tegenstelling tussen de omgeving en onderwerp, die geexponeerd is. 
                         Heel vaak heeft dat gevolgen in schon ontwerp, met weinig emoties en  </p>
                     
-                    <Link to='/template-1'>Business Classic</Link>
-                    <Link to='/template-4'>? Classic</Link>
+                    <Link to='/template-1'>C1 Business Classic</Link>
+                    
+                </ul>
+                <ul>
+                    <h3>Modern</h3>
+                    <p>Modern en post modern ontwerpen</p>
+                    
+                    <Link to='/template-4'>T4 Design</Link>
                 </ul>
             </Menu>
         </Layout>

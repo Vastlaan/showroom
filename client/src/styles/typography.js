@@ -141,3 +141,46 @@ export const ParaB1 = styled.p`
     text-align: ${(p) => (p.align ? p.align : "left")};
     max-width: 45rem;
 `;
+
+export const HeadlineT4 = styled.h1`
+    padding-top: 7rem;
+    font-family: ${fonts.roboto};
+    font-size: 22rem;
+    max-width: 46.5rem;
+    color: white;
+    text-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.3);
+    line-height: 0;
+    text-align: center;
+    span {
+        display: block;
+        color: ${(p) => p.theme.grey1};
+        margin: 0rem 0;
+    }
+`;
+
+export const HeadlineT42 = styled.h3`
+    font-family: ${fonts.roboto};
+    font-size: 2.7rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    max-width: 50rem;
+    margin-bottom: 1.4rem;
+    line-height: 1;
+
+    strong {
+        font-weight: 400;
+    }
+`;
+
+export const List = styled.ul`
+    list-style: square inside;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        font-family: ${fonts.roboto};
+        font-size: 1.7rem;
+        font-weight: 300;
+        margin: 0.9rem 0;
+    }
+`;

@@ -30,7 +30,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  border:5px solid ${p=>p.theme.primary};
+  background-color: ${p=>p.theme.grey8};
+  box-shadow: 0 0 1.5rem rgba(0,0,0,.3);
   width: 100%;
   margin: 0 auto;
   padding: 6rem 2.7rem;

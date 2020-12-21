@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Loading from './utils/loading'
 import Nav from './navigation'
 import Header from './header'
 import Quote from './utils/quote'
@@ -8,15 +9,17 @@ export default function Main() {
 
   const [data, setData] = useState([])
 
+  console.log(data)
   async function fetchData(){
-    console.log(process.env.NODE_ENV)
+    
     try{
       if(process.env.NODE_ENV==='development'){
-        const res = await fetch('http://192.168.2.9:1337/links')
+        const res = await fetch('http://localhost:1339/t-4-s')
         const d = await res.json()
         setData(d)
+        console.log(data)
       }else{
-        const res = await fetch('http://api.itcontext.nl/links')
+        const res = await fetch('http://localhost:1339/t-4-s')
         const d = await res.json()
         setData(d)
       }
@@ -28,14 +31,21 @@ export default function Main() {
   useEffect(()=>{
     fetchData()
   },[])
+
+  if(data.length===0){
+    return(
+      <Loading/>
+    )
+  }
   
 
   return (
     <>
-      <Nav data={data}/>
+      <Nav data={data[0].links}/>
       <Header/>
-      <Quote headline='Wij ontwerpen websites die verbasen jouw publiek.' subline="Alice Atchuk"/>
+      <Quote headline={data[0].quotes[0].text} subline={data[0].quotes[0].name}/>
       <Overlaping/>
+      <Quote headline={data[0].quotes[1].text} subline={data[0].quotes[1].name}/>
     </>
   )
 }

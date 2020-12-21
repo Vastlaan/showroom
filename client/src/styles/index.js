@@ -11,6 +11,7 @@ import {
     ButtonBPrimary,
     ButtonBSecondary,
     ButtonT4,
+    ButtonT42,
 } from "./buttons";
 import {
     Section,
@@ -28,6 +29,9 @@ import {
     Headline4,
     HeadlineB1,
     HeadlineB2,
+    HeadlineT4,
+    HeadlineT42,
+    List,
     ParaB1,
 } from "./typography";
 
@@ -43,6 +47,7 @@ export {
     ButtonFull,
     ButtonEmpty,
     ButtonT4,
+    ButtonT42,
     Section,
     SectionNarrow,
     Content,
@@ -56,6 +61,9 @@ export {
     Headline4,
     HeadlineB1,
     HeadlineB2,
+    HeadlineT4,
+    HeadlineT42,
+    List,
     ParaB1,
     ButtonBPrimary,
     ButtonBSecondary,

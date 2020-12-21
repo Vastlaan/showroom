@@ -4,7 +4,7 @@ import Img from '../../../img/t4-header.png'
 import Img1 from '../../../img/t4-header-2.png'
 import Img2 from '../../../img/t4-header-3.png'
 import Img3 from '../../../img/t4-header-4.png'
-import {fonts, respond, ContentWidth, ButtonT4} from '../../../styles'
+import {fonts, respond, ContentWidth, ButtonT42, HeadlineT4, HeadlineT42} from '../../../styles'
 
 export default function Header() {
   return (
@@ -18,13 +18,13 @@ export default function Header() {
             <img src={Img2} alt="sport"/>
           </Image2>
           <Info>
-            <h3>Het beste ervaring voor de <strong>lagste prijs</strong>. Neem <strong>contact</strong> met ons.</h3>
-            <ButtonT4>Contact</ButtonT4>
+            <HeadlineT42>Het beste ervaring voor de <strong>lagste prijs</strong>. Neem <strong>contact</strong> met ons.</HeadlineT42>
+            <ButtonT42>Contact</ButtonT42>
           </Info>
           <Heading>
-            <h1>
+            <HeadlineT4>
               De <span>si</span> gn
-            </h1>
+            </HeadlineT4>
           </Heading>
           <Image3>
             <img src={Img1} alt="sport"/>
@@ -43,7 +43,7 @@ export default function Header() {
 
 const Container = styled.header`
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   background-image: url(${Img});
   background-size: cover;
   background-repeat: no-repeat;
@@ -64,7 +64,7 @@ const Container = styled.header`
 const Grid = styled.div`
  display: grid;
   grid-template-columns: repeat(6,1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr) 25rem;
 `
 const Heading = styled.div`
   grid-column: 1/7;
@@ -86,23 +86,6 @@ const Heading = styled.div`
     grid-row: 1/-1;
     justify-self: center;
   `)}
-  
-
-  h1{
-    padding-top: 7rem;
-    font-family: ${fonts.roboto};
-    font-size: 22rem;
-    max-width: 46.5rem;
-    color: white;
-    text-shadow: .3rem .3rem 1rem rgba(0,0,0,.3);
-    line-height: 0;
-    text-align: center;
-    span{
-      display: block;
-      color: ${p=>p.theme.grey1};
-      margin: 0rem 0;
-    }
-  }
 `
 
 const Image= styled.div`
@@ -190,6 +173,7 @@ const Info =styled.div`
   animation: showUpBottom .6s;
   animation-delay: 1.2s;
   animation-fill-mode: forwards;
+  padding-bottom: 9rem;
 
   ${()=>respond('s',`
     grid-column: 3/7;
@@ -201,17 +185,5 @@ const Info =styled.div`
     grid-row: 2/4;
   `)}
 
-  h3{
-    font-family: ${fonts.roboto};
-    font-size: 2.7rem;
-    font-weight: 300;
-    text-transform: capitalize;
-    max-width: 50rem;
-    margin-bottom: 1.4rem;
-    line-height: 1;
-
-    strong{
-      font-weight: 400;
-    }
-  }
+  
 `
