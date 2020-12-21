@@ -9,7 +9,7 @@ export default function Main() {
 
   const [data, setData] = useState([])
 
-  console.log(data)
+  
   async function fetchData(){
     
     try{
@@ -17,9 +17,9 @@ export default function Main() {
         const res = await fetch('http://localhost:1339/t-4-s')
         const d = await res.json()
         setData(d)
-        console.log(data)
+        
       }else{
-        const res = await fetch('http://localhost:1339/t-4-s')
+        const res = await fetch('https://api.itcontext.nl/t-4-s')
         const d = await res.json()
         setData(d)
       }
