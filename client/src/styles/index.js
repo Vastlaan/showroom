@@ -19,6 +19,7 @@ import {
     ContentWidth,
     Line,
     SectionNarrow,
+    BackgroundTransition,
 } from "./containers";
 import {
     Para1,
@@ -52,6 +53,7 @@ export {
     SectionNarrow,
     Content,
     ContentWidth,
+    BackgroundTransition,
     Line,
     Para1,
     Headline1,

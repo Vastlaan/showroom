@@ -4,6 +4,7 @@ import Nav from './navigation'
 import Header from './header'
 import Quote from './utils/quote'
 import Overlaping from './overlaping'
+import {BackgroundTransition} from '../../styles'
 
 export default function Main() {
 
@@ -17,6 +18,7 @@ export default function Main() {
         const res = await fetch('http://localhost:1339/t-4-s')
         const d = await res.json()
         setData(d)
+        console.log(d)
         
       }else{
         const res = await fetch('https://api.itcontext.nl/t-4-s')
@@ -42,10 +44,13 @@ export default function Main() {
   return (
     <>
       <Nav data={data[0].links}/>
-      <Header/>
+
+      <Header data={data[0].t_4_landing_header}/>
+      <BackgroundTransition/>
+      <Overlaping data={data[0].t_4_landing_section_overlaping}/>
+
       <Quote headline={data[0].quotes[0].text} subline={data[0].quotes[0].name}/>
-      <Overlaping/>
-      <Quote headline={data[0].quotes[1].text} subline={data[0].quotes[1].name}/>
+      {/* <Quote headline={data[0].quotes[1].text} subline={data[0].quotes[1].name}/> */}
     </>
   )
 }

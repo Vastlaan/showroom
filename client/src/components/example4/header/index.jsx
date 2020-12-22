@@ -6,20 +6,23 @@ import Img2 from '../../../img/t4-header-3.png'
 import Img3 from '../../../img/t4-header-4.png'
 import {fonts, respond, ContentWidth, ButtonT42, HeadlineT4, HeadlineT42} from '../../../styles'
 
-export default function Header() {
+export default function Header({data}) {
+
+  const {heading, btn, url, img1, img2, img3} = data
+
   return (
     <Container>
       <ContentWidth>
         <Grid>
           <Image1>
-            <img src={Img3} alt="sport"/>
+            <img src={`http://localhost:1339${img3.url}`} alt="sport"/>
           </Image1>
           <Image2>
-            <img src={Img2} alt="sport"/>
+            <img src={`http://localhost:1339${img2.url}`} alt="sport"/>
           </Image2>
           <Info>
-            <HeadlineT42>Het beste ervaring voor de <strong>lagste prijs</strong>. Neem <strong>contact</strong> met ons.</HeadlineT42>
-            <ButtonT42>Contact</ButtonT42>
+            <HeadlineT42 dangerouslySetInnerHTML={{__html: heading}}></HeadlineT42>
+            <ButtonT42>{btn}</ButtonT42>
           </Info>
           <Heading>
             <HeadlineT4>
@@ -27,7 +30,7 @@ export default function Header() {
             </HeadlineT4>
           </Heading>
           <Image3>
-            <img src={Img1} alt="sport"/>
+            <img src={`http://localhost:1339${img1.url}`} alt="sport"/>
           </Image3>
         </Grid>
       </ContentWidth>
@@ -64,7 +67,7 @@ const Container = styled.header`
 const Grid = styled.div`
  display: grid;
   grid-template-columns: repeat(6,1fr);
-  grid-template-rows: repeat(2, 1fr) 25rem;
+  grid-template-rows: repeat(2, 1fr) 10rem;
 `
 const Heading = styled.div`
   grid-column: 1/7;
@@ -182,7 +185,7 @@ const Info =styled.div`
 
   ${()=>respond('l',`
     grid-column: 1/4;
-    grid-row: 2/4;
+    grid-row: 3/4;
   `)}
 
   

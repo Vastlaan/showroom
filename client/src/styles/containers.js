@@ -25,3 +25,11 @@ export const Line = styled.div`
     height: 2px;
     background-color: white;
 `;
+export const BackgroundTransition = styled.div`
+    height: ${(p) => (p.height ? p.height : "10rem")};
+    background-image: linear-gradient(
+        to bottom,
+        ${(p) => (p.color1 ? p.color1 : "#DCE0E1")},
+        ${(p) => (p.color2 ? p.color2 : "#fefefe")}
+    );
+`;

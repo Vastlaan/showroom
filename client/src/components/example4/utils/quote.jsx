@@ -30,8 +30,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: ${p=>p.theme.grey8};
-  box-shadow: 0 0 1.5rem rgba(0,0,0,.3);
+  //border: 2px solid ${p=>p.theme.grey4};
+  background-color: ${p=>p.theme.grey7};
+  //box-shadow: 0 0 1.5rem rgba(0,0,0,.3);
   width: 100%;
   margin: 0 auto;
   padding: 6rem 2.7rem;
@@ -41,9 +42,8 @@ const Container = styled.div`
 
 `
 const Background = styled.section`
-  background-image: linear-gradient(to bottom,#DCE0E1, #FEFEFE );
-  padding: 1.4rem;
-  padding-bottom: 9rem;
+  background-image: linear-gradient(to bottom,${p=>p.theme.primary}, ${p=>p.theme.primary} );
+  padding: 2.7rem 1.4rem;
 `
 const Quote = styled.div`
   position: absolute;

@@ -5,9 +5,10 @@ import Img from '../../../img/t4-background-2.jpg'
 import Img1 from '../../../img/t4-img-4.png'
 import Img2 from '../../../img/t4-img-3.png'
 
-export default function OverlapingComponent() {
+export default function OverlapingComponent({data}) {
 
   const [isOnTop, setIsOnTop] = useState(1)
+  const {btn, img1, img2, url, list, heading} =data
 
   return (
     
@@ -16,21 +17,20 @@ export default function OverlapingComponent() {
         <Grid>
           <Pictures>
             <Image1 top={isOnTop===1?true: false} onClick={()=>setIsOnTop(1)}>
-              <img src={Img1} alt="print screen of the website"/>
+              <img src={`http://localhost:1339${img1.url}`} alt="print screen of the website"/>
             </Image1>
             <Image2 top={isOnTop===2?true: false} onClick={()=>setIsOnTop(2)}>
-              <img src={Img2} alt="print screen of the website"/>
+              <img src={`http://localhost:1339${img2.url}`}  alt="print screen of the website"/>
             </Image2>
           </Pictures>
           <Info>
-            <HeadlineT42>Het Kracht van Creativiteit</HeadlineT42>
+            <HeadlineT42>{heading}</HeadlineT42>
             <List>
-              <li>Freelance Designers</li>
-              <li>Professioneel Fotografers</li>
-              <li>Beveiligd omgeving</li>
-              <li>En veel meer...</li>
+              {list.map(item=>{
+                return <li key={item.id}>{item.item}</li>
+              })}
             </List>
-            <ButtonT4>Lees verder...</ButtonT4>
+            <ButtonT4>{btn}</ButtonT4>
           </Info>
         </Grid>
         </Content>
@@ -40,12 +40,14 @@ export default function OverlapingComponent() {
   )
 }
 const Content = styled.div`
-  padding: 9rem 0;
+  padding-bottom: 30rem;
+
+  ${()=>respond('s','padding-bottom: 0;')}
 `
 const BackgroundImage = styled.section`
 
   width: 100%;
-  min-height: 75rem;
+  //min-height: 75rem;
   background-image: url(${Img});
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,8 +91,8 @@ const Pictures = styled.div`
   min-height: 45rem;
 
   ${()=>respond('s','grid-column: 1/8; min-height: 55rem;')}
-  ${()=>respond('l','grid-column: 1/8; min-height: 75rem;')}
-  ${()=>respond('l','grid-column: 1/8; min-height: 85rem;')}
+  ${()=>respond('l','grid-column: 1/8; min-height: 55rem;')}
+  ${()=>respond('xxl','grid-column: 1/8; min-height: 70rem;')}
 
 `
 const Image = styled.div`
