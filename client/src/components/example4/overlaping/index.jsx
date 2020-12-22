@@ -17,10 +17,10 @@ export default function OverlapingComponent({data}) {
         <Grid>
           <Pictures>
             <Image1 top={isOnTop===1?true: false} onClick={()=>setIsOnTop(1)}>
-              <img src={`http://localhost:1339${img1.url}`} alt="print screen of the website"/>
+              <img src={`https://api.itcontext.nl${img1.url}`} alt="print screen of the website"/>
             </Image1>
             <Image2 top={isOnTop===2?true: false} onClick={()=>setIsOnTop(2)}>
-              <img src={`http://localhost:1339${img2.url}`}  alt="print screen of the website"/>
+              <img src={`https://api.itcontext.nl${img2.url}`}  alt="print screen of the website"/>
             </Image2>
           </Pictures>
           <Info>

@@ -15,10 +15,10 @@ export default function Header({data}) {
       <ContentWidth>
         <Grid>
           <Image1>
-            <img src={`http://localhost:1339${img3.url}`} alt="sport"/>
+            <img src={`https://api.itcontext.nl${img3.url}`} alt="sport"/>
           </Image1>
           <Image2>
-            <img src={`http://localhost:1339${img2.url}`} alt="sport"/>
+            <img src={`https://api.itcontext.nl${img2.url}`} alt="sport"/>
           </Image2>
           <Info>
             <HeadlineT42 dangerouslySetInnerHTML={{__html: heading}}></HeadlineT42>
@@ -30,7 +30,7 @@ export default function Header({data}) {
             </HeadlineT4>
           </Heading>
           <Image3>
-            <img src={`http://localhost:1339${img1.url}`} alt="sport"/>
+            <img src={`https://api.itcontext.nl${img1.url}`} alt="sport"/>
           </Image3>
         </Grid>
       </ContentWidth>
