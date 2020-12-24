@@ -41,6 +41,10 @@ const Info = styled.div`
 
   ${()=>respond('l','grid-column: 1/3;align-items: center;')}
 
+  h3{
+    text-align: center;
+  }
+
 `
 const Buttons = styled.div`
   grid-column: 1/4;

@@ -15,7 +15,7 @@ export default function Section2() {
             <ButtonFull color='#AC4B44' color2='white'>Lees meer</ButtonFull>
           </Bulk>
         </BackgroundImg>
-      <Decoration gap='1.3rem' style={{position:'absolute', bottom: '100%', left: 0}}/>
+      <Decoration gap='1.3rem' style={{position:'absolute', bottom: '90%', left: 0}}/>
     </Section>
   )
 }

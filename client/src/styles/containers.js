@@ -3,7 +3,7 @@ import { respond } from "./respond";
 
 export const Section = styled.section`
     position: relative;
-    padding: 9rem 1.4rem;
+    padding: 9rem 0;
     ${() => respond("l", "padding: 9rem 0;")}
 `;
 export const SectionNarrow = styled.section`

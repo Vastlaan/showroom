@@ -38,13 +38,13 @@ export default function Section1() {
 }
 
 const Grid = styled.div`
-  padding: 9rem 4.7rem;
+  padding: 0rem 2.7rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1,1fr);
   
 
-  ${()=>respond('l',`grid-template-columns: repeat(3,1fr);`)}
+  ${()=>respond('l',`grid-template-columns: repeat(3,1fr);padding: 9rem 2.7rem;`)}
 
 
 `
