@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import {data} from '../../data/footer1'
-import {fonts, respond} from '../../styles'
+import {data} from '../../../data/footer1'
+import {fonts, respond} from '../../../styles'
 
 
 export default function Footer1() {

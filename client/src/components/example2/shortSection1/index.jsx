@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import Net from '../decorative1'
-import Img from '../../img/shortSection-1.jpg'
-import {fonts, respond, ButtonFull} from '../../styles'
+import Net from '../../decorative1'
+import Img from '../../../img/shortSection-1.jpg'
+import {fonts, respond, ButtonFull} from '../../../styles'
 import {BsBuilding, BsHouse} from 'react-icons/bs'
 
 export default function ShortSection1() {

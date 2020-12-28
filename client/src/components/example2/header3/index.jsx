@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import Net from '../decorative1'
-import {fonts, respond, ButtonFull, ButtonEmpty} from '../../styles'
-import Img1 from '../../img/header-3-1.jpg'
-import Img2 from '../../img/header-3-2.jpg'
-import Img3 from '../../img/header-3-3.jpg'
+import Net from '../../decorative1'
+import {fonts, respond, ButtonFull, ButtonEmpty} from '../../../styles'
+import Img1 from '../../../img/header-3-1.jpg'
+import Img2 from '../../../img/header-3-2.jpg'
+import Img3 from '../../../img/header-3-3.jpg'
 
 export default function Header3() {
   return (

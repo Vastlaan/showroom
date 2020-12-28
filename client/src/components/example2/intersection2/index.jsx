@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {fonts, respond} from '../../styles'
+import {fonts, respond} from '../../../styles'
 import {BsBuilding, BsHouse} from 'react-icons/bs'
 
 export default function Intersection2() {

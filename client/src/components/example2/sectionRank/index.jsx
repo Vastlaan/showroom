@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import Img from '../../img/sectionRank-1.jpg'
+import Img from '../../../img/sectionRank-1.jpg'
 import {BsFillStarFill} from 'react-icons/bs'
-import {fonts, respond, ButtonFull, ButtonEmpty} from '../../styles'
+import {fonts, respond, ButtonFull, ButtonEmpty} from '../../../styles'
 
 export default function Rank1() {
   return (

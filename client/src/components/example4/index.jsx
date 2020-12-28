@@ -15,7 +15,7 @@ export default function Main() {
     
     try{
       if(process.env.NODE_ENV==='development'){
-        const res = await fetch('http://localhost:1339/t-4-s')
+        const res = await fetch('https://api.itcontext.nl/t-4-s')
         const d = await res.json()
         setData(d)
         console.log(d)

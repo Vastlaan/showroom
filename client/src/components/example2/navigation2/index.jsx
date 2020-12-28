@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import Logo1 from '../logo1'
-import {respond, fonts, ButtonFull} from '../../styles'
+import Logo1 from './logo1'
+import {respond, fonts, ButtonFull} from '../../../styles'
 import {CgMenuMotion} from 'react-icons/cg'
 
 

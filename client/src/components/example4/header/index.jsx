@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from '../../../img/t4-header.png'
-import Img1 from '../../../img/t4-header-2.png'
-import Img2 from '../../../img/t4-header-3.png'
-import Img3 from '../../../img/t4-header-4.png'
+import marked from 'marked'
 import {fonts, respond, ContentWidth, ButtonT42, HeadlineT4, HeadlineT42} from '../../../styles'
 
 export default function Header({data}) {
@@ -21,7 +19,7 @@ export default function Header({data}) {
             <img src={`https://api.itcontext.nl${img2.url}`} alt="sport"/>
           </Image2>
           <Info>
-            <HeadlineT42 dangerouslySetInnerHTML={{__html: heading}}></HeadlineT42>
+            <HeadlineT42 dangerouslySetInnerHTML={{__html: marked(heading)}}></HeadlineT42>
             <ButtonT42>{btn}</ButtonT42>
           </Info>
           <Heading>
